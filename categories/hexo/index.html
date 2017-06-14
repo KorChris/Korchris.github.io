@@ -3,20 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>test | Code Printer</title>
+    <title>Category: hexo | Code Printer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
-    
     <meta name="description" content="The blog of KorChris">
-<meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2017/06/12/test/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Code Printer">
+<meta property="og:url" content="http://yoursite.com/categories/hexo/index.html">
 <meta property="og:site_name" content="Code Printer">
 <meta property="og:description" content="The blog of KorChris">
-<meta property="og:updated_time" content="2017-06-12T19:40:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
+<meta name="twitter:title" content="Code Printer">
 <meta name="twitter:description" content="The blog of KorChris">
     
 
@@ -68,12 +65,8 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/hexo/">hexo</a></li></ul>
                                     
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="https://github.com/KorChris">About</a>
-                                </li>
-                            
                         </ul>
                         <nav id="sub-nav">
                             <div id="search-form-wrap">
@@ -127,111 +120,72 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">hexo</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-test" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/02/23/Start Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo_kor.png)" alt="Hexo 시작하기" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/hexo/">hexo</a>
+            </div>
+            <div class="date"><time datetime="2017-02-23T23:32:22.000Z" itemprop="datePublished">2017-02-23</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        test
+        <a href="/2017/02/23/Start Hexo/">Hexo 시작하기</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/06/12/test/" class="article-date">
-            <time datetime="2017-06-12T19:40:28.000Z" itemprop="datePublished">2017-06-12</time>
-        </a>
-    </div>
-
-                
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="http://yoursite.com/2017/06/12/test/" data-id="cj3xjxr5k0001ylsyus9d8edl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            나만의 블로그Github을 모르던 시절, 제가 만들었던 코드를 저장할 수 있고 설명할 수 있는 개인 블로그를 가지고 싶었습니다. 그래서 처음에는 네이버 블로그로 시작했지만, code를 적기에는 너무나 협소한 환경이었고 Tistory에 초청받아 사용해보았지만 불편한 것은 여전했습니다.
+Github를 사용하기 시작하면서 markdown 언어를 알게 되었고 md
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-    </section>
+        </div>
+    
+
+
+    </div></section>
+
+
 
 
                         </div>
@@ -244,7 +198,7 @@
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="/facebook.com/korchris6791" target="_blank">
+                    <a class="social-tooltip" title="facebook" href="https://facebook.com/korchris6791" target="_blank">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -261,19 +215,6 @@
         </ul>
     </div>
     
-        
-<nav id="article-nav">
-    
-    
-        <a href="/2017/06/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hello World</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
-    
     <div class="widgets-container">
         
             
@@ -286,30 +227,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/06/12/test/" class="thumbnail">
+                            <a href="/2017/02/23/Start Hexo/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/06/12/test/" class="title">test</a></p>
-                            <p class="item-date"><time datetime="2017-06-12T19:40:28.000Z" itemprop="datePublished">2017-06-12</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/06/12/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/hexo_kor.png)" alt="Hexo 시작하기" class="thumbnail-image"></span>
     
     
 </a>
@@ -317,9 +238,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/06/12/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2017-06-12T19:39:43.000Z" itemprop="datePublished">2017-06-12</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
+                            <p class="item-title"><a href="/2017/02/23/Start Hexo/" class="title">Hexo 시작하기</a></p>
+                            <p class="item-date"><time datetime="2017-02-23T23:32:22.000Z" itemprop="datePublished">2017-02-23</time></p>
                         </div>
                     </li>
                 
@@ -329,22 +250,43 @@
 
             
                 
-
-            
-                
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        </div>
+    </div>
+
 
             
                 
