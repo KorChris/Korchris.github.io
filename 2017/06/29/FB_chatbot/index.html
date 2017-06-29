@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>[챗봇] 페이스북 챗봇 만들기 | Code Brewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="chatbot,facebook" />
+    
+    <meta name="description" content="나만의 페이스북 메신저 봇 만들기이 글은 Nodejs, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 Api.ai를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다. 챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이">
+<meta name="keywords" content="chatbot,facebook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[챗봇] 페이스북 챗봇 만들기">
+<meta property="og:url" content="http://yoursite.com/2017/06/29/FB_chatbot/index.html">
+<meta property="og:site_name" content="Code Brewer">
+<meta property="og:description" content="나만의 페이스북 메신저 봇 만들기이 글은 Nodejs, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 Api.ai를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다. 챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이">
+<meta property="og:image" content="http://yoursite.com/images/chatbot_intro.jpeg">
+<meta property="og:updated_time" content="2017-06-29T22:55:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[챗봇] 페이스북 챗봇 만들기">
+<meta name="twitter:description" content="나만의 페이스북 메신저 봇 만들기이 글은 Nodejs, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 Api.ai를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다. 챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이">
+<meta name="twitter:image" content="http://yoursite.com/images/chatbot_intro.jpeg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">For Better Today</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/chatbot/">chatbot</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/hexo/">hexo</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/chatbot/">chatbot</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-FB_chatbot" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [챗봇] 페이스북 챗봇 만들기
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/06/29/FB_chatbot/" class="article-date">
+            <time datetime="2017-06-29T22:43:00.000Z" itemprop="datePublished">2017-06-29</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/chatbot/">chatbot</a>, <a class="tag-link" href="/tags/facebook/">facebook</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="나만의-페이스북-메신저-봇-만들기"><a href="#나만의-페이스북-메신저-봇-만들기" class="headerlink" title="나만의 페이스북 메신저 봇 만들기"></a>나만의 페이스북 메신저 봇 만들기</h1><p>이 글은 <em>Nodejs</em>, <em>Heroku server</em>를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 <em>Api.ai</em>를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다.</p>
+<h2 id="챗봇이란"><a href="#챗봇이란" class="headerlink" title="챗봇이란?"></a>챗봇이란?</h2><p><strong>챗봇</strong>은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이 쓰는 메신저를 통해 정보를 얻을 수 있다는 점이 현재 구글, 페이스북, 마이크로소프트, 텔레그램을 비롯해 국내 네이버, 다음 등 IT 분야 기업들이 챗봇을 기반으로 한 메신저 플랫폼을 선보이는 중이다.</p>
+<blockquote>
+<p>[네이버 지식백과] 채팅봇, 챗봇 - 메신저 서비스 인공지능(AI)과 만나다 (용어로 보는 IT)</p>
+</blockquote>
+<h2 id="준비시작"><a href="#준비시작" class="headerlink" title="준비시작"></a>준비시작</h2><ol>
+<li>Javascript에 대한 기본 지식(문법)<ul>
+<li><a href="https://opentutorials.org/module/532" target="_blank" rel="external">생활코딩 자바스크립트 기본강의</a> 추천합니다.</li>
+</ul>
+</li>
+<li>Nodejs <ul>
+<li><a href="https://nodejs.org/ko" target="_blank" rel="external">Nodejs</a>에서 다운로드합니다. LTS 버전을 추천합니다.</li>
+</ul>
+</li>
+<li>Git<ul>
+<li>Git 설치는 <a href="https://opentutorials.org/course/2708/15129" target="_blank" rel="external">생활코딩 지옥에서 온 Git 중 설치방법</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</li>
+</ul>
+</li>
+<li>Heroku<ul>
+<li><a href="https://heroku.com" target="_blank" rel="external">heroku</a> 에 가입합니다.</li>
+</ul>
+</li>
+<li>Facebook Account<ul>
+<li>Facebook account가 필요합니다.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Nodejs로-프로젝트-시작하기"><a href="#Nodejs로-프로젝트-시작하기" class="headerlink" title="Nodejs로 프로젝트 시작하기"></a>Nodejs로 프로젝트 시작하기</h3><p>Nodejs설치한 후에 다음과 같은 명령어로 프로젝트를 시작합니다.<br>설치는 <a href="https://opentutorials.org/course/2136/11852" target="_blank" rel="external">생활코딩 Nodejs 설치</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</p>
+<p>설치를 완료하신 후, 원하는 폴더/디렉토리에서 다음과 같은 명령어로 기본 프로젝트를 생성합니다.</p>
+<p>저같은 경우에는 dev라는 폴더를 새로 생성한 후(<code>mkdir dev</code>)에, dev로 들어가서(<code>cd dev</code>) 프로젝트파일을 생성하였습니다. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir dev</div><div class="line"><span class="built_in">cd</span> dev</div><div class="line">sudo npm install npm -g</div><div class="line">npm init</div><div class="line">npm install express request body-parser --save</div></pre></td></tr></table></figure>
+<p>npm init를 실행하시면 다음과 같이 물어볼텐데 <code>entry point</code>만 <code>app.js</code>로 설정해주신 후 나머지는 자유롭게 설정해주시면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package name: (dev)</div><div class="line">version: (1.0.0)</div><div class="line">description:</div><div class="line">entry point: (index.js) app.js</div><div class="line"><span class="built_in">test</span> <span class="built_in">command</span>: </div><div class="line">git repository:</div><div class="line">keywords:</div><div class="line">author:</div><div class="line">license: (ISC)</div></pre></td></tr></table></figure>
+<p>아래와 같이 나오면 성공입니다. version은 다르셔도 괜찮습니다. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+ body-parser@1.17.2</div><div class="line">+ express@4.15.3</div><div class="line">+ request@2.81.0</div><div class="line">added 96 packages <span class="keyword">in</span> 5.53s</div></pre></td></tr></table></figure>
+<h3 id="페이스북-앱-세팅하기"><a href="#페이스북-앱-세팅하기" class="headerlink" title="페이스북 앱 세팅하기"></a>페이스북 앱 세팅하기</h3><ol>
+<li>Facebook Page<ul>
+<li>Chat bot을 적용시킬 <code>Facebook Page</code>를 만드신 후에 <a href="developer.facebook.com">Facebook Developer Page</a>에 접속합니다. </li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/facebook_page.png" alt="facebook page 만들기"><br><img src="/images/develop_facebook.png" alt="페이스북 개발자 페이지"></p>
+<ol>
+<li>Facebook App<ul>
+<li>Add a new App을 누르시고 새로운 App을 만듭니다.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/add_app.png" alt="add_app"></p>
+<p><img src="/images/new_app.png" alt="new_app"></p>
+<p><img src="/images/create_app.png" alt="create_app"></p>
+<ul>
+<li>Messenger에서 set up버튼을 누릅니다.</li>
+</ul>
+<p><img src="/images/select_form.png" alt="여러가지 플랫폼중에 챗봇을 위한 messenger를 선택"></p>
+<h3 id="app-js-파일-작성"><a href="#app-js-파일-작성" class="headerlink" title="app.js 파일 작성"></a>app.js 파일 작성</h3><p>이제 Heroku 서버에 배포시킬 자바스크립트 파일을 작성합니다.<br><code>app.js</code>라는 이름으로 처음 nodejs를 통해 npm install을 진행했던 폴더(이 글의 경우, dev폴더)에 저장합니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</div><div class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</div><div class="line"><span class="keyword">const</span> app = express();</div><div class="line"></div><div class="line">app.set(<span class="string">'port'</span>, (process.env.PORT || <span class="number">5000</span>));</div><div class="line"></div><div class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</div><div class="line">app.use(bodyParser.json());</div><div class="line"></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    res.send(<span class="string">'Hello world'</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.get(<span class="string">'/webhook'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (req.query[<span class="string">'hub.verify_token'</span>] === <span class="string">'VERIFY_TOKEN'</span>) &#123;</div><div class="line">        res.send(req.query[<span class="string">'hub.challenge'</span>]);</div><div class="line">    &#125;</div><div class="line">    res.send(<span class="string">'Error, wrong token'</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'running on port'</span>, app.get(<span class="string">'port'</span>));</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>app.js를 완성하셨다면 폴더 안에 있는 <code>package.json</code>을 수정하셔야 합니다. 파일 내의 main과 scripts 안에 있는 내용을 다음과 같이 수정해줍니다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">"main": "app.js",</div><div class="line">  "scripts": &#123;</div><div class="line">    "start": "node app.js"</div><div class="line">  &#125;,</div><div class="line"> ...</div></pre></td></tr></table></figure>
+<p>이제 배포 단계입니다. git저장소를 만드시고 heroku server를 만드신 후에, git push를 통해 heroku에 배포해줍니다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m &apos;init&apos;</div><div class="line">heroku create</div><div class="line">git push heroku master</div></pre></td></tr></table></figure>
+<p>저는 다음과 같은 결과가 나왔습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">KorChris$ heroku create</div><div class="line">Creating app... <span class="keyword">done</span>, ⬢ YOUR_DYNO_NAME</div><div class="line">https://YOUR_DYNO_NAME.herokuapp.com/ | https://git.heroku.com/YOUR_DYNO_NAME.git</div><div class="line"></div><div class="line">KorChris$ git push heroku master</div><div class="line">Counting objects: 4, <span class="keyword">done</span>.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (4/4), <span class="keyword">done</span>.</div><div class="line">Writing objects: 100% (4/4), 1018 bytes | 0 bytes/s, <span class="keyword">done</span>.</div><div class="line">...</div><div class="line">...</div><div class="line">...</div><div class="line"></div><div class="line">remote: Verifying deploy... <span class="keyword">done</span>.</div><div class="line">To https://git.heroku.com/YOUR_DYNO_NAME.git</div><div class="line">   199.........73c  master -&gt; master</div></pre></td></tr></table></figure>
+<h3 id="페이스북-App-세팅하기"><a href="#페이스북-App-세팅하기" class="headerlink" title="페이스북 App 세팅하기"></a>페이스북 App 세팅하기</h3><p>이제 Heroku server와 페이스북 App을 연결시켜줍니다.<br>페이스북 앱 관리창에 가셔서 전 단계와 같이 Messenger 탭을 클릭합니다.</p>
+<p>Token Generation</p>
+<ul>
+<li>Token Generation에서 자신이 만든 page를 고르시고</li>
+</ul>
+<p><img src="/images/token_generation.png" alt="token_generation"></p>
+<p><img src="/images/token_ex.png" alt="token_ex"></p>
+<ul>
+<li>생성된 Token을 Click해서 본인만 알 수 있도록 기록해둡니다. 나중에 이 token을 이용해서 프로그래밍을 하게 됩니다.</li>
+</ul>
+<p>그 후에는 Webhook을 설정해야합니다.</p>
+<p>Webhook Setting</p>
+<ul>
+<li>token generation 하단에 다음과 같이 Webhook을 설정할 수 있는 탭을 발견할 수 있습니다.</li>
+</ul>
+<p><img src="/images/webhook.png" alt="Webhook Set up"></p>
+<p>아래와 같이 heroku에서 생성된 Dyno의 URL을 입력하고 뒤에 /webhook을 넣어주시고<br>VERIFY TOKEN에는 ‘VERIFY_TOKEN’을 넣어줍니다.<br><img src="/images/set_webhook.png" alt="set_webhook"></p>
+<p>Webhook set up이 끝났다면 token generation때 사용했던 page를 다시 선택해주시고, subscribe버튼을 클릭해줍니다.<br><img src="/images/subscribe.png" alt="subscribe"></p>
+<h3 id="간단한-Echo-bot-만들기"><a href="#간단한-Echo-bot-만들기" class="headerlink" title="간단한 Echo bot 만들기"></a>간단한 Echo bot 만들기</h3><p>app.js를 수정하여 사용자가 보낸 text를 그대로 다시 보내는 Echo Bot을 만들어보겠습니다.<br>Token generation단계에서 받은 token을 PAGE_ACCESS_TOKEN에 넣어주고, app.js를 다음과 같이 작성합니다. 자세한 코드 설명은 다음 글에서 다루겠습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</div><div class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</div><div class="line"><span class="keyword">const</span> app = express();</div><div class="line"></div><div class="line"><span class="comment">//작은 따옴표 사이에 본인이 받으신 token을 paste합니다.</span></div><div class="line"><span class="comment">//나중에 보안을 위해서 따로 setting을 하는 방법을 알려드리겠습니다.</span></div><div class="line"><span class="comment">//이 토큰이 포함된 파일을 절대 업로드하거나 github에 적용시키지 마세요.</span></div><div class="line"><span class="keyword">var</span> PAGE_ACCESS_TOKEN = <span class="string">'YOUR TOKEN HERE'</span>;</div><div class="line"></div><div class="line">app.set(<span class="string">'port'</span>, (process.env.PORT || <span class="number">5000</span>));</div><div class="line"></div><div class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</div><div class="line">app.use(bodyParser.json());</div><div class="line"></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    res.send(<span class="string">'Hello world'</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">app.get(<span class="string">'/webhook'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (req.query[<span class="string">'hub.verify_token'</span>] === <span class="string">'VERIFY_TOKEN'</span>) &#123;</div><div class="line">        res.send(req.query[<span class="string">'hub.challenge'</span>]);</div><div class="line">    &#125;</div><div class="line">    res.send(<span class="string">'Error, wrong token'</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line">app.post(<span class="string">"/webhook"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"WEBHOOK GET IT WORKS"</span>);</div><div class="line">    <span class="keyword">var</span> data = req.body;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line"></div><div class="line">    <span class="comment">// Make sure this is a page subscription</span></div><div class="line">    <span class="keyword">if</span> (data.object == <span class="string">'page'</span>) &#123;</div><div class="line">        <span class="comment">// Iterate over each entry</span></div><div class="line">        <span class="comment">// There may be multiple if batched</span></div><div class="line">        data.entry.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">pageEntry</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> pageID = pageEntry.id;</div><div class="line">            <span class="keyword">var</span> timeOfEvent = pageEntry.time;</div><div class="line"></div><div class="line">            <span class="comment">// Iterate over each messaging event</span></div><div class="line">            pageEntry.messaging.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">messagingEvent</span>) </span>&#123;</div><div class="line">                <span class="keyword">if</span> (messagingEvent.optin) &#123;</div><div class="line">                    receivedAuthentication(messagingEvent);</div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (messagingEvent.message) &#123;</div><div class="line">                    receivedMessage(messagingEvent);</div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (messagingEvent.postback) &#123;</div><div class="line">                    receivedPostback(messagingEvent);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="built_in">console</span>.log(<span class="string">"Webhook received unknown messagingEvent: "</span>, messagingEvent);</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        res.sendStatus(<span class="number">200</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">receivedMessage</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> senderId = event.sender.id;</div><div class="line">    <span class="keyword">var</span> content = event.message.text;</div><div class="line">    <span class="keyword">var</span> echo_message = <span class="string">"ECHO : "</span> + content;</div><div class="line">    sendTextMessage(senderId, echo_message);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">receivedPostback</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"RECEIVED POSTBACK IT WORKS"</span>);</div><div class="line">    <span class="keyword">var</span> senderID = event.sender.id;</div><div class="line">    <span class="keyword">var</span> recipientID = event.recipient.id;</div><div class="line">    <span class="keyword">var</span> timeOfPostback = event.timestamp;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> payload = event.postback.payload;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Received postback for user %d and page %d with payload '%s' "</span> +</div><div class="line">        <span class="string">"at %d"</span>, senderID, recipientID, payload, timeOfPostback);</div><div class="line"></div><div class="line">    sendTextMessage(senderID, <span class="string">"Postback called"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendTextMessage</span>(<span class="params">recipientId, message</span>) </span>&#123;</div><div class="line">    request(&#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">'https://graph.facebook.com/v2.6/me/messages'</span>,</div><div class="line">        <span class="attr">qs</span>: &#123; <span class="attr">access_token</span>: PAGE_ACCESS_TOKEN &#125;,</div><div class="line">        <span class="attr">method</span>: <span class="string">'POST'</span>,</div><div class="line">        <span class="attr">json</span>: &#123;</div><div class="line">            <span class="attr">recipient</span>: &#123; <span class="attr">id</span>: recipientId &#125;,</div><div class="line">            <span class="attr">message</span>: &#123; <span class="attr">text</span>: message &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error, response, body</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (error) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Error sending message: '</span> + response.error);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'running on port'</span>, app.get(<span class="string">'port'</span>));</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>app.js를 모두 작성하셨으면 Git을 이용하여 수정된 파일을 다시 배포해줍니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">'echo bot'</span></div><div class="line">git push heroku master</div></pre></td></tr></table></figure></p>
+<p>이제 Echo bot이 완성되었습니다. </p>
+<p>페이스북을 통해서 메세지를 보내봅시다.</p>
+<p><img src="/images/echobot.png" alt="echo bot"></p>
+<h3 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h3><p>다음 글에서는 코드 분석 및 더 많은 페이스북 메신저 기능을 적용하는 법을 다루도록 하겠습니다.</p>
+<p>제가 다룬 코드는 제 <a href="https://github.com/KorChris/facebook_chatbot" target="_blank" rel="external">Github</a>에서 확인하실 수 있습니다.</p>
+<p>감사합니다.</p>
+<blockquote>
+<p>Ref : </p>
+<ol>
+<li><a href="https://www.sitepoint.com/building-facebook-chat-bot-node-heroku" target="_blank" rel="external">https://www.sitepoint.com/building-facebook-chat-bot-node-heroku</a></li>
+<li><a href="https://github.com/fbsamples/messenger-platform-samples" target="_blank" rel="external">https://github.com/fbsamples/messenger-platform-samples</a></li>
+<li><a href="https://github.com/jw84/messenger-bot-tutorial" target="_blank" rel="external">https://github.com/jw84/messenger-bot-tutorial</a></li>
+</ol>
+</blockquote>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/06/29/FB_chatbot/" data-id="cj4iw8su80000ntsyyb0xiq6w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://facebook.com/korchris6791" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KorChris" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/02/23/Start Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 시작하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/06/29/FB_chatbot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/chatbot_intro.jpeg)" alt="[챗봇] 페이스북 챗봇 만들기" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/chatbot/">chatbot</a></p>
+                            <p class="item-title"><a href="/2017/06/29/FB_chatbot/" class="title">[챗봇] 페이스북 챗봇 만들기</a></p>
+                            <p class="item-date"><time datetime="2017-06-29T22:43:00.000Z" itemprop="datePublished">2017-06-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/23/Start Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo_intro.png)" alt="Hexo 시작하기" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
+                            <p class="item-title"><a href="/2017/02/23/Start Hexo/" class="title">Hexo 시작하기</a></p>
+                            <p class="item-date"><time datetime="2017-02-23T23:32:22.000Z" itemprop="datePublished">2017-02-23</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/chatbot/">chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 KorChris</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
