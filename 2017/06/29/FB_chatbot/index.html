@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/29/FB_chatbot/index.html">
 <meta property="og:site_name" content="Code Brewer">
 <meta property="og:description" content="나만의 페이스북 메신저 봇 만들기이 글은 Nodejs, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 Api.ai를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다. 챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/chatbot_intro.jpeg">
 <meta property="og:updated_time" content="2017-06-29T22:55:51.000Z">
 <meta name="twitter:card" content="summary">
@@ -148,7 +149,7 @@
                 
     <div class="article-date">
         <a href="/2017/06/29/FB_chatbot/" class="article-date">
-            <time datetime="2017-06-29T22:43:00.000Z" itemprop="datePublished">2017-06-29</time>
+            <time datetime="2017-06-29T06:43:00.000Z" itemprop="datePublished">2017-06-29</time>
         </a>
     </div>
 
@@ -169,19 +170,19 @@
 </blockquote>
 <h2 id="준비시작"><a href="#준비시작" class="headerlink" title="준비시작"></a>준비시작</h2><ol>
 <li>Javascript에 대한 기본 지식(문법)<ul>
-<li><a href="https://opentutorials.org/module/532" target="_blank" rel="external">생활코딩 자바스크립트 기본강의</a> 추천합니다.</li>
+<li><a href="https://opentutorials.org/module/532" target="_blank" rel="noopener">생활코딩 자바스크립트 기본강의</a> 추천합니다.</li>
 </ul>
 </li>
 <li>Nodejs <ul>
-<li><a href="https://nodejs.org/ko" target="_blank" rel="external">Nodejs</a>에서 다운로드합니다. LTS 버전을 추천합니다.</li>
+<li><a href="https://nodejs.org/ko" target="_blank" rel="noopener">Nodejs</a>에서 다운로드합니다. LTS 버전을 추천합니다.</li>
 </ul>
 </li>
 <li>Git<ul>
-<li>Git 설치는 <a href="https://opentutorials.org/course/2708/15129" target="_blank" rel="external">생활코딩 지옥에서 온 Git 중 설치방법</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</li>
+<li>Git 설치는 <a href="https://opentutorials.org/course/2708/15129" target="_blank" rel="noopener">생활코딩 지옥에서 온 Git 중 설치방법</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</li>
 </ul>
 </li>
 <li>Heroku<ul>
-<li><a href="https://heroku.com" target="_blank" rel="external">heroku</a> 에 가입합니다.</li>
+<li><a href="https://heroku.com" target="_blank" rel="noopener">heroku</a> 에 가입합니다.</li>
 </ul>
 </li>
 <li>Facebook Account<ul>
@@ -189,7 +190,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="Nodejs로-프로젝트-시작하기"><a href="#Nodejs로-프로젝트-시작하기" class="headerlink" title="Nodejs로 프로젝트 시작하기"></a>Nodejs로 프로젝트 시작하기</h3><p>Nodejs설치한 후에 다음과 같은 명령어로 프로젝트를 시작합니다.<br>설치는 <a href="https://opentutorials.org/course/2136/11852" target="_blank" rel="external">생활코딩 Nodejs 설치</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</p>
+<h3 id="Nodejs로-프로젝트-시작하기"><a href="#Nodejs로-프로젝트-시작하기" class="headerlink" title="Nodejs로 프로젝트 시작하기"></a>Nodejs로 프로젝트 시작하기</h3><p>Nodejs설치한 후에 다음과 같은 명령어로 프로젝트를 시작합니다.<br>설치는 <a href="https://opentutorials.org/course/2136/11852" target="_blank" rel="noopener">생활코딩 Nodejs 설치</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</p>
 <p>설치를 완료하신 후, 원하는 폴더/디렉토리에서 다음과 같은 명령어로 기본 프로젝트를 생성합니다.</p>
 <p>저같은 경우에는 dev라는 폴더를 새로 생성한 후(<code>mkdir dev</code>)에, dev로 들어가서(<code>cd dev</code>) 프로젝트파일을 생성하였습니다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir dev</div><div class="line"><span class="built_in">cd</span> dev</div><div class="line">sudo npm install npm -g</div><div class="line">npm init</div><div class="line">npm install express request body-parser --save</div></pre></td></tr></table></figure>
@@ -249,14 +250,14 @@
 <p>페이스북을 통해서 메세지를 보내봅시다.</p>
 <p><img src="/images/echobot.png" alt="echo bot"></p>
 <h3 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h3><p>다음 글에서는 코드 분석 및 더 많은 페이스북 메신저 기능을 적용하는 법을 다루도록 하겠습니다.</p>
-<p>제가 다룬 코드는 제 <a href="https://github.com/KorChris/facebook_chatbot" target="_blank" rel="external">Github</a>에서 확인하실 수 있습니다.</p>
+<p>제가 다룬 코드는 제 <a href="https://github.com/KorChris/facebook_chatbot" target="_blank" rel="noopener">Github</a>에서 확인하실 수 있습니다.</p>
 <p>감사합니다.</p>
 <blockquote>
 <p>Ref : </p>
 <ol>
-<li><a href="https://www.sitepoint.com/building-facebook-chat-bot-node-heroku" target="_blank" rel="external">https://www.sitepoint.com/building-facebook-chat-bot-node-heroku</a></li>
-<li><a href="https://github.com/fbsamples/messenger-platform-samples" target="_blank" rel="external">https://github.com/fbsamples/messenger-platform-samples</a></li>
-<li><a href="https://github.com/jw84/messenger-bot-tutorial" target="_blank" rel="external">https://github.com/jw84/messenger-bot-tutorial</a></li>
+<li><a href="https://www.sitepoint.com/building-facebook-chat-bot-node-heroku" target="_blank" rel="noopener">https://www.sitepoint.com/building-facebook-chat-bot-node-heroku</a></li>
+<li><a href="https://github.com/fbsamples/messenger-platform-samples" target="_blank" rel="noopener">https://github.com/fbsamples/messenger-platform-samples</a></li>
+<li><a href="https://github.com/jw84/messenger-bot-tutorial" target="_blank" rel="noopener">https://github.com/jw84/messenger-bot-tutorial</a></li>
 </ol>
 </blockquote>
 
@@ -266,7 +267,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/06/29/FB_chatbot/" data-id="cj4j23m5a0001yusyira6g8tk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/06/29/FB_chatbot/" data-id="cje2whnq70000qtv81dmvg1kc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -405,7 +406,7 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/chatbot/">chatbot</a></p>
                             <p class="item-title"><a href="/2017/06/29/FB_chatbot/" class="title">[챗봇] 페이스북 챗봇 만들기</a></p>
-                            <p class="item-date"><time datetime="2017-06-29T22:43:00.000Z" itemprop="datePublished">2017-06-29</time></p>
+                            <p class="item-date"><time datetime="2017-06-29T06:43:00.000Z" itemprop="datePublished">2017-06-29</time></p>
                         </div>
                     </li>
                 
@@ -425,7 +426,7 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
                             <p class="item-title"><a href="/2017/02/23/Start Hexo/" class="title">Hexo 시작하기</a></p>
-                            <p class="item-date"><time datetime="2017-02-23T23:32:22.000Z" itemprop="datePublished">2017-02-23</time></p>
+                            <p class="item-date"><time datetime="2017-02-23T06:32:22.000Z" itemprop="datePublished">2017-02-23</time></p>
                         </div>
                     </li>
                 
@@ -504,7 +505,7 @@
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-                <p>&copy; 2017 KorChris</p>
+                <p>&copy; 2018 KorChris</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
