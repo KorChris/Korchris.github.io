@@ -153,11 +153,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                4
+                5
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                10
+                13
                 <span>tags</span>
             </div>
         </div>
@@ -182,7 +182,7 @@
 
             
             <section id="main">
-    <article id="post-word2vector_paper_review" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-distributed_representations_of_words_and_phrases_and_their_compositionality" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -190,7 +190,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/10/word2vector_paper_review/">Word2vector paper review(on work)</a>
+            <a class="article-title" href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a>
         </h1>
     
 
@@ -199,8 +199,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/10/word2vector_paper_review/">
-            <time datetime="2018-09-10T14:47:00.000Z" itemprop="datePublished">2018-09-10</time>
+        <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">
+            <time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time>
         </a>
     </div>
 
@@ -214,7 +214,7 @@
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
+        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/hierarchical-softmax/">hierarchical softmax</a>, <a class="tag-link" href="/tags/negative-sampling/">negative sampling</a>, <a class="tag-link" href="/tags/subsampling/">subsampling</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
     </div>
 
                     </div>
@@ -225,13 +225,11 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="Word2Vector-Paper-Review"><a href="#Word2Vector-Paper-Review" class="headerlink" title="Word2Vector Paper Review"></a>Word2Vector Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
+            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">previous work</a><br><a href="continue">paper link</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
 <hr>
-<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper propose two model architectures for computing continuous vector representations of words from very large data sets. The main goal of this paper is introducing high quality word vectors representation. This paper considers what language model to use such as NNLM, RNNLM, and Parallel training of NN. Rather using above LM, it proposed two log linear models.   </p>
-<p>First model is CBOW(Continuous bag of words model) it’s similar to the feedforward NNLM where the non-linear hidden layer is removed and the projection layer is shared for all words. CBOW model is for predicting the word from words around.   </p>
-<p>Second Model is Skip-Gram. It’s similar to CBOW but instead of predicting the current word based on the context, it tired to maximize classification of a word based on another word in the same sentence.</p>
+<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper presents several extensions that improve both the quality of the vectors and the training speed by subsampling, negative sampling, and learning good vector representation from finding phrases in the text.   Original skip-gram model had to calculate all W, which is often large. Rather than doing this, this paper suggest to use hierarchical softmax which uses binary tree representation for words and use sigmoid function to calculate probabilities. This method reduces cost of computing. Also this paper suggest alternative to the hierarchical softmax, NCE(Noise Contrastive Estimation).  This paper define Negative sampling(NEG) by the objective than NCE. This task is to distinguish the target word Wo from draws from the noise distribution, using logistic regression where there are k negative samples for each data sample. Subsampling focus on most frequent words which can easily occur many times. To counter the imbalance between the rare and frequent words, it does subsampling that make a threshold, and if probability is enough bigger and reach the threshold, subsample for this word.  Learning Phrases is finding words that appear frequently together, and infrequently in other contexts. This paper make these words as unique tokens in the training data, and like subsampling, make a threshold and if count score is enough bigger and reach the threshold, these words is one phrase. </p>
 <hr>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><h3 id="Skip-Gram"><a href="#Skip-Gram" class="headerlink" title="Skip-Gram"></a>Skip-Gram</h3><h4 id="implementation"><a href="#implementation" class="headerlink" title="implementation"></a>implementation</h4>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="Hierarchical-Softmax"><a href="#Hierarchical-Softmax" class="headerlink" title="Hierarchical Softmax"></a>Hierarchical Softmax</h3><h3 id="Negative-Sampling"><a href="#Negative-Sampling" class="headerlink" title="Negative Sampling"></a>Negative Sampling</h3><h3 id="Subsampling"><a href="#Subsampling" class="headerlink" title="Subsampling"></a>Subsampling</h3><h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4>
         
         </div>
         <footer class="article-footer">
@@ -241,7 +239,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2018/09/10/word2vector_paper_review/" data-id="cjlwk0ar00004te5f7zkbzgfo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" data-id="cjlzd4f1b0002905f7elkdi4k" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -309,7 +307,144 @@
 
             
     
-        <a href="http://korchris.github.io/2018/09/10/word2vector_paper_review/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/10/word2vector_paper_review/">0</span>&nbsp;Comments</a>
+        <a href="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">0</span>&nbsp;Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-word2vector_paper_review" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/09/13/word2vector_paper_review/">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/09/13/word2vector_paper_review/">
+            <time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/NLP/">NLP</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
+<hr>
+<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper propose two model architectures for computing continuous vector representations of words from very large data sets. The main goal of this paper is introducing high quality word vectors representation. This paper considers what language model to use such as NNLM, RNNLM, and Parallel training of NN. Rather using above LM, it proposed two log linear models.   </p>
+<p>First model is CBOW(Continuous bag of words model) it’s similar to the feedforward NNLM where the non-linear hidden layer is removed and the projection layer is shared for all words. CBOW model is for predicting the word from words around.   </p>
+<p>Second Model is Skip-Gram. It’s similar to CBOW but instead of predicting the current word based on the context, it tired to maximize classification of a word based on another word in the same sentence.</p>
+<hr>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><h3 id="Skip-Gram"><a href="#Skip-Gram" class="headerlink" title="Skip-Gram"></a>Skip-Gram</h3><h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-id="cjlzd4f1i0006905f3oi7gjfr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://korchris.github.io/2018/09/13/word2vector_paper_review/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/word2vector_paper_review/">0</span>&nbsp;Comments</a>
     
 
         </footer>
@@ -487,7 +622,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2018/02/25/deep_learning_1st/" data-id="cjlwk0ar50008te5fuo4106yu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2018/02/25/deep_learning_1st/" data-id="cjlzd4f34001s905fj2i34eti" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -715,7 +850,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cjlwk0arl001cte5fw1kiholu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cjlzd4f32001q905ffmnr66ml" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -885,7 +1020,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2017/02/23/Start Hexo/" data-id="cjlwk0ar40007te5fbc92x6p5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2017/02/23/Start Hexo/" data-id="cjlzd4f1d0003905fgzklmfqp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -976,10 +1111,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/09/10/word2vector_paper_review/" class="thumbnail">
+                            <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/deep_learning.jpg)" alt="Word2vector paper review(on work)" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)" class="thumbnail-image"></span>
     
 </a>
 
@@ -987,8 +1122,27 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/NLP/">NLP</a></p>
-                            <p class="item-title"><a href="/2018/09/10/word2vector_paper_review/" class="title">Word2vector paper review(on work)</a></p>
-                            <p class="item-date"><time datetime="2018-09-10T14:47:00.000Z" itemprop="datePublished">2018-09-10</time></p>
+                            <p class="item-title"><a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" class="title">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a></p>
+                            <p class="item-date"><time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/09/13/word2vector_paper_review/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/NLP/">NLP</a></p>
+                            <p class="item-title"><a href="/2018/09/13/word2vector_paper_review/" class="title">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a></p>
+                            <p class="item-date"><time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time></p>
                         </div>
                     </li>
                 
@@ -1058,7 +1212,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/chatbot/">chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/chatbot/">chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1067,7 +1221,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1076,7 +1230,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NLP/">NLP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word2vec/">word2vec</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NLP/">NLP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hierarchical-softmax/">hierarchical softmax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/negative-sampling/">negative sampling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/subsampling/">subsampling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word2vec/">word2vec</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1085,7 +1239,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/DL/" style="font-size: 20px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Natural-Language-Processing/" style="font-size: 10px;">Natural Language Processing</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a>
+            <a href="/tags/DL/" style="font-size: 20px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 15px;">Deep Learning</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/NLP/" style="font-size: 15px;">NLP</a> <a href="/tags/Natural-Language-Processing/" style="font-size: 15px;">Natural Language Processing</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hierarchical-softmax/" style="font-size: 10px;">hierarchical softmax</a> <a href="/tags/negative-sampling/" style="font-size: 10px;">negative sampling</a> <a href="/tags/subsampling/" style="font-size: 10px;">subsampling</a> <a href="/tags/word2vec/" style="font-size: 15px;">word2vec</a>
         </div>
     </div>
 
