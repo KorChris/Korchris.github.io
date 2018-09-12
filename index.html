@@ -225,7 +225,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">previous work</a><br><a href="continue">paper link</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
+            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">previous work</a><br><a href="this_paper">paper link</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[this_paper]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
 <hr>
 <h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper presents several extensions that improve both the quality of the vectors and the training speed by subsampling, negative sampling, and learning good vector representation from finding phrases in the text.   Original skip-gram model had to calculate all W, which is often large. Rather than doing this, this paper suggest to use hierarchical softmax which uses binary tree representation for words and use sigmoid function to calculate probabilities. This method reduces cost of computing. Also this paper suggest alternative to the hierarchical softmax, NCE(Noise Contrastive Estimation).  This paper define Negative sampling(NEG) by the objective than NCE. This task is to distinguish the target word Wo from draws from the noise distribution, using logistic regression where there are k negative samples for each data sample. Subsampling focus on most frequent words which can easily occur many times. To counter the imbalance between the rare and frequent words, it does subsampling that make a threshold, and if probability is enough bigger and reach the threshold, subsample for this word.  Learning Phrases is finding words that appear frequently together, and infrequently in other contexts. This paper make these words as unique tokens in the training data, and like subsampling, make a threshold and if count score is enough bigger and reach the threshold, these words is one phrase. </p>
 <hr>
@@ -239,7 +239,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" data-id="cjlzd4f1b0002905f7elkdi4k" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" data-id="cjlzd8trz0007d55fuazvn32f" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -325,7 +325,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/13/word2vector_paper_review/">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a>
+            <a class="article-title" href="/2018/09/13/word2vector_paper_review/">Efficient Estimation of Word Representations in Vector Space paper review (on work)</a>
         </h1>
     
 
@@ -360,7 +360,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
+            <h1 id="Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review"><a href="#Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review" class="headerlink" title="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review"></a>Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
 <hr>
 <h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper propose two model architectures for computing continuous vector representations of words from very large data sets. The main goal of this paper is introducing high quality word vectors representation. This paper considers what language model to use such as NNLM, RNNLM, and Parallel training of NN. Rather using above LM, it proposed two log linear models.   </p>
 <p>First model is CBOW(Continuous bag of words model) it’s similar to the feedforward NNLM where the non-linear hidden layer is removed and the projection layer is shared for all words. CBOW model is for predicting the word from words around.   </p>
@@ -376,7 +376,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-id="cjlzd4f1i0006905f3oi7gjfr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-id="cjlzd8ts10008d55f3tmcb7ey" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -622,7 +622,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2018/02/25/deep_learning_1st/" data-id="cjlzd4f34001s905fj2i34eti" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2018/02/25/deep_learning_1st/" data-id="cjlzd8ts20009d55fbx4syb8z" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -850,7 +850,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cjlzd4f32001q905ffmnr66ml" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cjlzd8tt8001xd55fgk10s229" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1020,7 +1020,7 @@
 
 </div>
 
-    <a data-url="http://korchris.github.io/2017/02/23/Start Hexo/" data-id="cjlzd4f1d0003905fgzklmfqp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2017/02/23/Start Hexo/" data-id="cjlzd8trv0004d55f3gcvwqhl" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1133,7 +1133,7 @@
                             <a href="/2018/09/13/word2vector_paper_review/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/deep_learning.jpg)" alt="Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Efficient Estimation of Word Representations in Vector Space paper review (on work)" class="thumbnail-image"></span>
     
 </a>
 
@@ -1141,7 +1141,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/NLP/">NLP</a></p>
-                            <p class="item-title"><a href="/2018/09/13/word2vector_paper_review/" class="title">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a></p>
+                            <p class="item-title"><a href="/2018/09/13/word2vector_paper_review/" class="title">Efficient Estimation of Word Representations in Vector Space paper review (on work)</a></p>
                             <p class="item-date"><time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time></p>
                         </div>
                     </li>
