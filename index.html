@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang=en>
+<html>
 <head>
     <meta charset="utf-8">
     
     <title>Code Brewer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
     <meta name="description" content="The blog of KorChris">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Code Brewer">
@@ -21,15 +22,13 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
     
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
@@ -39,43 +38,39 @@
     
     
     
-    
-
 
 </head>
 
 <body>
-    <div id="container">
+    <div id="wrap">
         <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">Code Brewer</span>
-            </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/.">Home</a>
-                
-                    <a class="main-nav-link" href="/archives">Archives</a>
-                
-                    <a class="main-nav-link" href="/categories">Categories</a>
-                
-                    <a class="main-nav-link" href="/tags">Tags</a>
-                
-            </nav>
-            
-                
-                <nav id="sub-nav">
-                    <div class="profile" id="profile-nav">
-                        <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/my_avatar.png" />
-                            <i class="fas fa-caret-down"></i>
-                        </a>
-                    </div>
-                </nav>
-            
-            <div id="search-form-wrap">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">For Better Today</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ML/">ML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/NLP/">NLP</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/chatbot/">chatbot</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/hexo/">hexo</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
 
     <form class="search-form">
         <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
@@ -86,7 +81,7 @@
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
             <input type="text" class="ins-search-input" placeholder="Type something..." />
-            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
             <div class="ins-section-container"></div>
@@ -112,1140 +107,378 @@
 <script src="/js/insight.js"></script>
 
 </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
-        <table class="menu outer">
-            <tr>
-                
-                    <td><a class="main-nav-link" href="/.">Home</a></td>
-                
-                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
-                
-                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
-                
-                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
-                
-                <td>
-                    
-    <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
-    </div>
-
-                </td>
-            </tr>
-        </table>
     </div>
 </header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <em class="page-title-link" data-url="home">Home</em>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            
 
-        <div class="outer">
-            
-                
-
-<aside id="profile" class="profile-fixed">
-    <div class="inner profile-inner">
-        <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/my_avatar.png" />
-            <h2 id="name">korchris</h2>
-            <h3 id="title">Graduate Student in Handong Global Univ.</h3>
-            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Pohang, South Korea</span>
-            <a id="follow" target="_blank" href="https://github.com/korchris/">FOLLOW</a>
-        </div>
-        <div class="article-info profile-block">
-            <div class="article-info-block">
-                6
-                <span>posts</span>
+    
+    
+        
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
             </div>
-            <div class="article-info-block">
-                14
-                <span>tags</span>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/09/20/glove/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Glove, Global Vector for Word Representations (on work)" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/20/glove/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/NLP/">NLP</a>
             </div>
+            <div class="date"><time datetime="2018-09-19T15:47:00.000Z" itemprop="datePublished">2018-09-20</time></div>
         </div>
         
-        <div class="profile-block social-links">
-            <table>
-                <tr>
-                    
-                    
-                    <td>
-                        <a href="http://github.com/korchris/korchris" target="_blank" title="github" class=tooltip>
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </td>
-                    
-                </tr>
-            </table>
-        </div>
-        
-    </div>
-</aside>
-
-            
-            <section id="main">
-    <article id="post-glove" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/20/glove/">Glove, Global Vector for Word Representations (on work)</a>
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/09/20/glove/">Glove, Global Vector for Word Representations (on work)</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/20/glove/">
-            <time datetime="2018-09-19T15:47:00.000Z" itemprop="datePublished">2018-09-20</time>
-        </a>
+        <p class="article-excerpt">
+            Glove, Global Vector for Word Representations Paper Reviewpaper link[word2vec]: http://aclweb.org/anthology/D14-1162
+
+Short ReviewThis paper proposed the word vector with statistical information by tr
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/NLP/">NLP</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/Glove/">Glove</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Glove-Global-Vector-for-Word-Representations-Paper-Review"><a href="#Glove-Global-Vector-for-Word-Representations-Paper-Review" class="headerlink" title="Glove, Global Vector for Word Representations Paper Review"></a>Glove, Global Vector for Word Representations Paper Review</h1><p><a href="word2vec">paper link</a><br>[word2vec]: <a href="http://aclweb.org/anthology/D14-1162" target="_blank" rel="noopener">http://aclweb.org/anthology/D14-1162</a></p>
-<hr>
-<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper proposed the word vector with statistical information by training only on the nonzero elements in a word-word cooccurrence matrix rather than on the entire sparse matrix or individual context windows in a large corpus.</p>
-<p>There are two approach to make word as vector. Matrix factorization is one of them. It utilize low-rank approximations to decompose large matrices that capture statistical information about a corpus. It learns from cooccurrence statistical information. One of other approach is Shallow window-based methods. It learns word representations that aid in making predictions within local context windows like skip-gram. </p>
-<p>With cooccurrence probabilities, assume that I = ice, j = stream. For words k related to ice but no stream. Say k is solid, we expect the ratio  will be large. If k is gas, it will be small.</p>
-<p>The most general model takes this form.</p>
-<p>But F need only the diff of the two targets words, and to avoid being complicated function, dot product of the arguments.   </p>
-<p>The thing is that word vector X should be symmetric. So this paper use homomorphism to model it by using such as exp function.</p>
-<p>For rare words, it give small weight for them.</p>
-<hr>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="Related-Works"><a href="#Related-Works" class="headerlink" title="Related Works"></a>Related Works</h3><h3 id="The-Glove-Model"><a href="#The-Glove-Model" class="headerlink" title="The Glove Model"></a>The Glove Model</h3>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2018/09/20/glove/" data-id="cjm9wgl0a0000cn5fugb2kflr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2018/09/20/glove/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/20/glove/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
-
-
-
-    <article id="post-distributed_representations_of_words_and_phrases_and_their_compositionality" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a>
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/NLP/">NLP</a>
+            </div>
+            <div class="date"><time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">
-            <time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time>
-        </a>
+        <p class="article-excerpt">
+            Distributed Representations of Words and Phrases and their Compositionality Paper Reviewprevious workpaper link[word2vec]: https://arxiv.org/pdf/1301.3781.pdf[this_paper]: https://arxiv.org/pdf/1310.4
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/NLP/">NLP</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/hierarchical-softmax/">hierarchical softmax</a>, <a class="tag-link" href="/tags/negative-sampling/">negative sampling</a>, <a class="tag-link" href="/tags/subsampling/">subsampling</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review"><a href="#Distributed-Representations-of-Words-and-Phrases-and-their-Compositionality-Paper-Review" class="headerlink" title="Distributed Representations of Words and Phrases and their Compositionality Paper Review"></a>Distributed Representations of Words and Phrases and their Compositionality Paper Review</h1><p><a href="word2vec">previous work</a><br><a href="this_paper">paper link</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[this_paper]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
-<hr>
-<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper presents several extensions that improve both the quality of the vectors and the training speed by subsampling, negative sampling, and learning good vector representation from finding phrases in the text.   Original skip-gram model had to calculate all W, which is often large. Rather than doing this, this paper suggest to use hierarchical softmax which uses binary tree representation for words and use sigmoid function to calculate probabilities. This method reduces cost of computing. Also this paper suggest alternative to the hierarchical softmax, NCE(Noise Contrastive Estimation).  This paper define Negative sampling(NEG) by the objective than NCE. This task is to distinguish the target word Wo from draws from the noise distribution, using logistic regression where there are k negative samples for each data sample. Subsampling focus on most frequent words which can easily occur many times. To counter the imbalance between the rare and frequent words, it does subsampling that make a threshold, and if probability is enough bigger and reach the threshold, subsample for this word.  Learning Phrases is finding words that appear frequently together, and infrequently in other contexts. This paper make these words as unique tokens in the training data, and like subsampling, make a threshold and if count score is enough bigger and reach the threshold, these words is one phrase. </p>
-<hr>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="Hierarchical-Softmax"><a href="#Hierarchical-Softmax" class="headerlink" title="Hierarchical Softmax"></a>Hierarchical Softmax</h3><h3 id="Negative-Sampling"><a href="#Negative-Sampling" class="headerlink" title="Negative Sampling"></a>Negative Sampling</h3><h3 id="Subsampling"><a href="#Subsampling" class="headerlink" title="Subsampling"></a>Subsampling</h3><h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" data-id="cjm1nmn7s0004r25fy87q9cgy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
-
-
-
-    <article id="post-word2vector_paper_review" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/13/word2vector_paper_review/">Efficient Estimation of Word Representations in Vector Space paper review (on work)</a>
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/09/13/word2vector_paper_review/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="Efficient Estimation of Word Representations in Vector Space paper review (on work)" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/word2vector_paper_review/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/NLP/">NLP</a>
+            </div>
+            <div class="date"><time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/09/13/word2vector_paper_review/">Efficient Estimation of Word Representations in Vector Space paper review (on work)</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/13/word2vector_paper_review/">
-            <time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time>
-        </a>
+        <p class="article-excerpt">
+            Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Reviewpaper linkcontinuous work[word2vec]: https://arxiv.org/pdf/1301.3781.pdf[continue]: https://arxiv.org/pdf/1310.4546.
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/NLP/">NLP</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/ML/">ML</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/NLP/">NLP</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review"><a href="#Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review" class="headerlink" title="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review"></a>Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
-<hr>
-<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper propose two model architectures for computing continuous vector representations of words from very large data sets. The main goal of this paper is introducing high quality word vectors representation. This paper considers what language model to use such as NNLM, RNNLM, and Parallel training of NN. Rather using above LM, it proposed two log linear models.   </p>
-<p>First model is CBOW(Continuous bag of words model) it’s similar to the feedforward NNLM where the non-linear hidden layer is removed and the projection layer is shared for all words. CBOW model is for predicting the word from words around.   </p>
-<p>Second Model is Skip-Gram. It’s similar to CBOW but instead of predicting the current word based on the context, it tired to maximize classification of a word based on another word in the same sentence.</p>
-<hr>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><h3 id="Skip-Gram"><a href="#Skip-Gram" class="headerlink" title="Skip-Gram"></a>Skip-Gram</h3><h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-id="cjm1nmn7w0007r25fme5d9d5z" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2018/09/13/word2vector_paper_review/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/09/13/word2vector_paper_review/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
-
-
-
-    <article id="post-deep_learning_1st" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/25/deep_learning_1st/">딥러닝 기초 질문에 대한 답변달기</a>
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/02/25/deep_learning_1st/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="딥러닝 기초 질문에 대한 답변달기" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2018/02/25/deep_learning_1st/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/ML/">ML</a>
+            </div>
+            <div class="date"><time datetime="2018-02-25T14:47:00.000Z" itemprop="datePublished">2018-02-25</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/02/25/deep_learning_1st/">딥러닝 기초 질문에 대한 답변달기</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/02/25/deep_learning_1st/">
-            <time datetime="2018-02-25T14:47:00.000Z" itemprop="datePublished">2018-02-25</time>
-        </a>
+        <p class="article-excerpt">
+            Deep Learning페이스북 딥러닝 관련 포스팅에서 발견한 인터뷰 질문 내용에 대해서 답해보기질문출처
+질문
+요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?
+
+Non-Linearity라는 말의 의미와 그 필요성은?
+ReLU로 어떻게 곡선 함수를 근사하나?
+ReLU의 문제점은?
+Bias는 왜 있는걸까?
+
+
+Gradient Descent에 대해서
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/ML/">ML</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/DL/">DL</a>, <a class="tag-link" href="/tags/ML/">ML</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h1><h2 id="페이스북-딥러닝-관련-포스팅에서-발견한-인터뷰-질문-내용에-대해서-답해보기"><a href="#페이스북-딥러닝-관련-포스팅에서-발견한-인터뷰-질문-내용에-대해서-답해보기" class="headerlink" title="페이스북 딥러닝 관련 포스팅에서 발견한 인터뷰 질문 내용에 대해서 답해보기"></a>페이스북 딥러닝 관련 포스팅에서 발견한 인터뷰 질문 내용에 대해서 답해보기</h2><p><a href="https://www.facebook.com/dgtgrade/posts/1679749038750622" target="_blank" rel="noopener">질문출처</a></p>
-<h3 id="질문"><a href="#질문" class="headerlink" title="질문"></a>질문</h3><ol>
-<li><p>요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?</p>
-<ul>
-<li>Non-Linearity라는 말의 의미와 그 필요성은?</li>
-<li>ReLU로 어떻게 곡선 함수를 근사하나?</li>
-<li>ReLU의 문제점은?</li>
-<li>Bias는 왜 있는걸까?</li>
-</ul>
-</li>
-<li><p>Gradient Descent에 대해서 쉽게 설명한다면?</p>
-<ul>
-<li>왜 꼭 Gradient를 써야 할까?</li>
-<li>그 그래프에서 가로축과 세로축 각각은 무엇인가?</li>
-<li>실제 상황에서는 그 그래프가 어떻게 그려질까?</li>
-<li>GD 중에 때때로 Loss가 증가하는 이유는?</li>
-<li>중학생이 이해할 수 있게 더 쉽게 설명 한다면?</li>
-<li>Back Propagation에 대해서 쉽게 설명 한다면?</li>
-</ul>
-</li>
-<li><p>Local Minima 문제에도 불구하고 딥러닝이 잘 되는 이유는?</p>
-<ul>
-<li>GD가 Local Minima 문제를 피하는 방법은?</li>
-<li>찾은 해가 Global Minimum인지 아닌지 알 수 있는 방법은?</li>
-</ul>
-</li>
-<li><p>CNN에 대해서 아는대로 얘기하라</p>
-<ul>
-<li>CNN이 MLP보다 좋은 이유는?</li>
-<li>어떤 CNN의 파라메터 개수를 계산해 본다면?</li>
-<li>주어진 CNN과 똑같은 MLP를 만들 수 있나?</li>
-<li>풀링시에 만약 Max를 사용한다면 그 이유는?</li>
-<li>시퀀스 데이터에 CNN을 적용하는 것이 가능할까?</li>
-</ul>
-</li>
-<li><p>Word2Vec의 원리는?</p>
-<ul>
-<li>그 그림에서 왼쪽 파라메터들을 임베딩으로 쓰는 이유는?</li>
-<li>그 그림에서 오른쪽 파라메터들의 의미는 무엇일까?</li>
-<li>남자와 여자가 가까울까? 남자와 자동차가 가까울까?</li>
-<li>번역을 Unsupervised로 할 수 있을까?</li>
-</ul>
-</li>
-<li><p>Auto Encoder에 대해서 아는대로 얘기하라</p>
-<ul>
-<li>MNIST AE를 TF나 Keras등으로 만든다면 몇줄일까?</li>
-<li>MNIST에 대해서 임베딩 차원을 1로 해도 학습이 될까?</li>
-<li>임베딩 차원을 늘렸을 때의 장단점은?</li>
-<li>AE 학습시 항상 Loss를 0으로 만들수 있을까?</li>
-<li>VAE는 무엇인가?</li>
-</ul>
-</li>
-<li><p>Training 세트와 Test 세트를 분리하는 이유는?</p>
-<ul>
-<li>Validation 세트가 따로 있는 이유는?</li>
-<li>Test 세트가 오염되었다는 말의 뜻은?</li>
-<li>Regularization이란 무엇인가?</li>
-</ul>
-</li>
-<li><p>Batch Normalization의 효과는?</p>
-<ul>
-<li>Dropout의 효과는?</li>
-<li>BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?</li>
-<li>GAN에서 Generator 쪽에도 BN을 적용해도 될까?</li>
-</ul>
-</li>
-<li><p>SGD, RMSprop, Adam에 대해서 아는대로 설명한다면?</p>
-<ul>
-<li>SGD에서 Stochastic의 의미는?</li>
-<li>미니배치를 작게 할때의 장단점은?</li>
-<li>모멘텀의 수식을 적어 본다면?</li>
-</ul>
-</li>
-<li><p>간단한 MNIST 분류기를 MLP+CPU 버전으로 numpy로 만든다면 몇줄일까?</p>
-<ul>
-<li>어느 정도 돌아가는 녀석을 작성하기까지 몇시간 정도 걸릴까?</li>
-<li>Back Propagation은 몇줄인가?</li>
-<li>CNN으로 바꾼다면 얼마나 추가될까?</li>
-</ul>
-</li>
-<li><p>간단한 MNIST 분류기를 TF나 Keras 등으로 작성하는데 몇시간이 필요한가?</p>
-<ul>
-<li>CNN이 아닌 MLP로 해도 잘 될까?</li>
-<li>마지막 레이어 부분에 대해서 설명 한다면?</li>
-<li>학습은 BCE loss로 하되 상황을 MSE loss로 보고 싶다면?</li>
-<li>만약 한글 (인쇄물) OCR을 만든다면 데이터 수집은 어떻게 할 수 있을까?</li>
-</ul>
-</li>
-<li><p>간단한 MNIST DCGAN을 작성한다면 TF 등으로 몇줄 정도 될까?</p>
-<ul>
-<li>GAN의 Loss를 적어보면?</li>
-<li>D를 학습할때 G의 Weight을 고정해야 한다. 방법은?</li>
-<li>학습이 잘 안될때 시도해 볼 수 있는 방법들은?</li>
-</ul>
-</li>
-<li><p>딥러닝할 때 GPU를 쓰면 좋은 이유는?</p>
-<ul>
-<li>학습 중인데 GPU를 100% 사용하지 않고 있다. 이유는?</li>
-<li>GPU를 두개 다 쓰고 싶다. 방법은?</li>
-<li>학습시 필요한 GPU 메모리는 어떻게 계산하는가?</li>
-</ul>
-</li>
-</ol>
-<h3 id="답변"><a href="#답변" class="headerlink" title="답변"></a>답변</h3><ol>
-<li>요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?<blockquote>
-<p>Relu -&gt; h = max(0,a) where a = Wx + b<br>Sigmoid를 사용할 경우, a가 0보다 클 때, x의 값이 증가할 때마다 그 값이 점점 작아지게 되며 vanishing gradient 문제가 발생하게 된다. 반면 relu는 이 그라데이션이 사라질 가능성이 낮기 때문에 더 빨리 학습을 할 수 있게 된다. </p>
-<ul>
-<li>Non-Linearity라는 말의 의미와 그 필요성은?</li>
-<li>ReLU로 어떻게 곡선 함수를 근사하나?</li>
-<li>ReLU의 문제점은?</li>
-<li>Bias는 왜 있는걸까?</li>
-</ul>
-</blockquote>
-</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2018/02/25/deep_learning_1st/" data-id="cjm1nmn7z0009r25flo24dg1x" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2018/02/25/deep_learning_1st/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2018/02/25/deep_learning_1st/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
-
-
-
-    <article id="post-FB_chatbot" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/06/29/FB_chatbot/">[챗봇] 페이스북 챗봇 만들기</a>
+        </div>
+    
+
+    
+    
+        
+            </div></section>
+        
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/06/29/FB_chatbot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/chatbot_intro.jpeg)" alt="[챗봇] 페이스북 챗봇 만들기" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2017/06/29/FB_chatbot/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/chatbot/">chatbot</a>
+            </div>
+            <div class="date"><time datetime="2017-06-29T06:43:00.000Z" itemprop="datePublished">2017-06-29</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/06/29/FB_chatbot/">[챗봇] 페이스북 챗봇 만들기</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2017/06/29/FB_chatbot/">
-            <time datetime="2017-06-29T06:43:00.000Z" itemprop="datePublished">2017-06-29</time>
-        </a>
+        <p class="article-excerpt">
+            나만의 페이스북 메신저 봇 만들기이 글은 Nodejs, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 Api.ai를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다.
+챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이 
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/chatbot/">chatbot</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/chatbot/">chatbot</a>, <a class="tag-link" href="/tags/facebook/">facebook</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="나만의-페이스북-메신저-봇-만들기"><a href="#나만의-페이스북-메신저-봇-만들기" class="headerlink" title="나만의 페이스북 메신저 봇 만들기"></a>나만의 페이스북 메신저 봇 만들기</h1><p>이 글은 <em>Nodejs</em>, <em>Heroku server</em>를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다. 이후에 <em>Api.ai</em>를 이용하여 더 똑똑한 챗봇을 만드는 과정을 포스팅하겠습니다.</p>
-<h2 id="챗봇이란"><a href="#챗봇이란" class="headerlink" title="챗봇이란?"></a>챗봇이란?</h2><p><strong>챗봇</strong>은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비스다. 기존 사용자 자신이 쓰는 메신저를 통해 정보를 얻을 수 있다는 점이 현재 구글, 페이스북, 마이크로소프트, 텔레그램을 비롯해 국내 네이버, 다음 등 IT 분야 기업들이 챗봇을 기반으로 한 메신저 플랫폼을 선보이는 중이다.</p>
-<blockquote>
-<p>[네이버 지식백과] 채팅봇, 챗봇 - 메신저 서비스 인공지능(AI)과 만나다 (용어로 보는 IT)</p>
-</blockquote>
-<h2 id="준비시작"><a href="#준비시작" class="headerlink" title="준비시작"></a>준비시작</h2><ol>
-<li>Javascript에 대한 기본 지식(문법)<ul>
-<li><a href="https://opentutorials.org/module/532" target="_blank" rel="noopener">생활코딩 자바스크립트 기본강의</a> 추천합니다.</li>
-</ul>
-</li>
-<li>Nodejs <ul>
-<li><a href="https://nodejs.org/ko" target="_blank" rel="noopener">Nodejs</a>에서 다운로드합니다. LTS 버전을 추천합니다.</li>
-</ul>
-</li>
-<li>Git<ul>
-<li>Git 설치는 <a href="https://opentutorials.org/course/2708/15129" target="_blank" rel="noopener">생활코딩 지옥에서 온 Git 중 설치방법</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</li>
-</ul>
-</li>
-<li>Heroku<ul>
-<li><a href="https://heroku.com" target="_blank" rel="noopener">heroku</a> 에 가입합니다.</li>
-</ul>
-</li>
-<li>Facebook Account<ul>
-<li>Facebook account가 필요합니다.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Nodejs로-프로젝트-시작하기"><a href="#Nodejs로-프로젝트-시작하기" class="headerlink" title="Nodejs로 프로젝트 시작하기"></a>Nodejs로 프로젝트 시작하기</h3><p>Nodejs설치한 후에 다음과 같은 명령어로 프로젝트를 시작합니다.<br>설치는 <a href="https://opentutorials.org/course/2136/11852" target="_blank" rel="noopener">생활코딩 Nodejs 설치</a> 강의를 보시면 수월하게 진행하실 수 있습니다.</p>
-<p>설치를 완료하신 후, 원하는 폴더/디렉토리에서 다음과 같은 명령어로 기본 프로젝트를 생성합니다.</p>
-<p>저같은 경우에는 dev라는 폴더를 새로 생성한 후(<code>mkdir dev</code>)에, dev로 들어가서(<code>cd dev</code>) 프로젝트파일을 생성하였습니다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir dev</span><br><span class="line"><span class="built_in">cd</span> dev</span><br><span class="line">sudo npm install npm -g</span><br><span class="line">npm init</span><br><span class="line">npm install express request body-parser --save</span><br></pre></td></tr></table></figure>
-<p>npm init를 실행하시면 다음과 같이 물어볼텐데 <code>entry point</code>만 <code>app.js</code>로 설정해주신 후 나머지는 자유롭게 설정해주시면 됩니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package name: (dev)</span><br><span class="line">version: (1.0.0)</span><br><span class="line">description:</span><br><span class="line">entry point: (index.js) app.js</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>: </span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC)</span><br></pre></td></tr></table></figure>
-<p>아래와 같이 나오면 성공입니다. version은 다르셔도 괜찮습니다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+ body-parser@1.17.2</span><br><span class="line">+ express@4.15.3</span><br><span class="line">+ request@2.81.0</span><br><span class="line">added 96 packages <span class="keyword">in</span> 5.53s</span><br></pre></td></tr></table></figure>
-<h3 id="페이스북-앱-세팅하기"><a href="#페이스북-앱-세팅하기" class="headerlink" title="페이스북 앱 세팅하기"></a>페이스북 앱 세팅하기</h3><ol>
-<li>Facebook Page<ul>
-<li>Chat bot을 적용시킬 <code>Facebook Page</code>를 만드신 후에 <a href="developer.facebook.com">Facebook Developer Page</a>에 접속합니다. </li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/facebook_page.png" alt="facebook page 만들기"><br><img src="/images/develop_facebook.png" alt="페이스북 개발자 페이지"></p>
-<ol start="2">
-<li>Facebook App<ul>
-<li>Add a new App을 누르시고 새로운 App을 만듭니다.</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/add_app.png" alt="add_app"></p>
-<p><img src="/images/new_app.png" alt="new_app"></p>
-<p><img src="/images/create_app.png" alt="create_app"></p>
-<ul>
-<li>Messenger에서 set up버튼을 누릅니다.</li>
-</ul>
-<p><img src="/images/select_form.png" alt="여러가지 플랫폼중에 챗봇을 위한 messenger를 선택"></p>
-<h3 id="app-js-파일-작성"><a href="#app-js-파일-작성" class="headerlink" title="app.js 파일 작성"></a>app.js 파일 작성</h3><p>이제 Heroku 서버에 배포시킬 자바스크립트 파일을 작성합니다.<br><code>app.js</code>라는 이름으로 처음 nodejs를 통해 npm install을 진행했던 폴더(이 글의 경우, dev폴더)에 저장합니다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.set(<span class="string">'port'</span>, (process.env.PORT || <span class="number">5000</span>));</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    res.send(<span class="string">'Hello world'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/webhook'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (req.query[<span class="string">'hub.verify_token'</span>] === <span class="string">'VERIFY_TOKEN'</span>) &#123;</span><br><span class="line">        res.send(req.query[<span class="string">'hub.challenge'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    res.send(<span class="string">'Error, wrong token'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'running on port'</span>, app.get(<span class="string">'port'</span>));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>app.js를 완성하셨다면 폴더 안에 있는 <code>package.json</code>을 수정하셔야 합니다. 파일 내의 main과 scripts 안에 있는 내용을 다음과 같이 수정해줍니다.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">"main": "app.js",</span><br><span class="line">  "scripts": &#123;</span><br><span class="line">    "start": "node app.js"</span><br><span class="line">  &#125;,</span><br><span class="line"> ...</span><br></pre></td></tr></table></figure>
-<p>이제 배포 단계입니다. git저장소를 만드시고 heroku server를 만드신 후에, git push를 통해 heroku에 배포해줍니다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;init&apos;</span><br><span class="line">heroku create</span><br><span class="line">git push heroku master</span><br></pre></td></tr></table></figure>
-<p>저는 다음과 같은 결과가 나왔습니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">KorChris$ heroku create</span><br><span class="line">Creating app... <span class="keyword">done</span>, ⬢ YOUR_DYNO_NAME</span><br><span class="line">https://YOUR_DYNO_NAME.herokuapp.com/ | https://git.heroku.com/YOUR_DYNO_NAME.git</span><br><span class="line"></span><br><span class="line">KorChris$ git push heroku master</span><br><span class="line">Counting objects: 4, <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (4/4), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (4/4), 1018 bytes | 0 bytes/s, <span class="keyword">done</span>.</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">remote: Verifying deploy... <span class="keyword">done</span>.</span><br><span class="line">To https://git.heroku.com/YOUR_DYNO_NAME.git</span><br><span class="line">   199.........73c  master -&gt; master</span><br></pre></td></tr></table></figure>
-<h3 id="페이스북-App-세팅하기"><a href="#페이스북-App-세팅하기" class="headerlink" title="페이스북 App 세팅하기"></a>페이스북 App 세팅하기</h3><p>이제 Heroku server와 페이스북 App을 연결시켜줍니다.<br>페이스북 앱 관리창에 가셔서 전 단계와 같이 Messenger 탭을 클릭합니다.</p>
-<p>Token Generation</p>
-<ul>
-<li>Token Generation에서 자신이 만든 page를 고르시고</li>
-</ul>
-<p><img src="/images/token_generation.png" alt="token_generation"></p>
-<p><img src="/images/token_ex.png" alt="token_ex"></p>
-<ul>
-<li>생성된 Token을 Click해서 본인만 알 수 있도록 기록해둡니다. 나중에 이 token을 이용해서 프로그래밍을 하게 됩니다.</li>
-</ul>
-<p>그 후에는 Webhook을 설정해야합니다.</p>
-<p>Webhook Setting</p>
-<ul>
-<li>token generation 하단에 다음과 같이 Webhook을 설정할 수 있는 탭을 발견할 수 있습니다.</li>
-</ul>
-<p><img src="/images/webhook.png" alt="Webhook Set up"></p>
-<p>아래와 같이 heroku에서 생성된 Dyno의 URL을 입력하고 뒤에 /webhook을 넣어주시고<br>VERIFY TOKEN에는 ‘VERIFY_TOKEN’을 넣어줍니다.<br><img src="/images/set_webhook.png" alt="set_webhook"></p>
-<p>Webhook set up이 끝났다면 token generation때 사용했던 page를 다시 선택해주시고, subscribe버튼을 클릭해줍니다.<br><img src="/images/subscribe.png" alt="subscribe"></p>
-<h3 id="간단한-Echo-bot-만들기"><a href="#간단한-Echo-bot-만들기" class="headerlink" title="간단한 Echo bot 만들기"></a>간단한 Echo bot 만들기</h3><p>app.js를 수정하여 사용자가 보낸 text를 그대로 다시 보내는 Echo Bot을 만들어보겠습니다.<br>Token generation단계에서 받은 token을 PAGE_ACCESS_TOKEN에 넣어주고, app.js를 다음과 같이 작성합니다. 자세한 코드 설명은 다음 글에서 다루겠습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//작은 따옴표 사이에 본인이 받으신 token을 paste합니다.</span></span><br><span class="line"><span class="comment">//나중에 보안을 위해서 따로 setting을 하는 방법을 알려드리겠습니다.</span></span><br><span class="line"><span class="comment">//이 토큰이 포함된 파일을 절대 업로드하거나 github에 적용시키지 마세요.</span></span><br><span class="line"><span class="keyword">var</span> PAGE_ACCESS_TOKEN = <span class="string">'YOUR TOKEN HERE'</span>;</span><br><span class="line"></span><br><span class="line">app.set(<span class="string">'port'</span>, (process.env.PORT || <span class="number">5000</span>));</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    res.send(<span class="string">'Hello world'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/webhook'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (req.query[<span class="string">'hub.verify_token'</span>] === <span class="string">'VERIFY_TOKEN'</span>) &#123;</span><br><span class="line">        res.send(req.query[<span class="string">'hub.challenge'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    res.send(<span class="string">'Error, wrong token'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.post(<span class="string">"/webhook"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"WEBHOOK GET IT WORKS"</span>);</span><br><span class="line">    <span class="keyword">var</span> data = req.body;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Make sure this is a page subscription</span></span><br><span class="line">    <span class="keyword">if</span> (data.object == <span class="string">'page'</span>) &#123;</span><br><span class="line">        <span class="comment">// Iterate over each entry</span></span><br><span class="line">        <span class="comment">// There may be multiple if batched</span></span><br><span class="line">        data.entry.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">pageEntry</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> pageID = pageEntry.id;</span><br><span class="line">            <span class="keyword">var</span> timeOfEvent = pageEntry.time;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Iterate over each messaging event</span></span><br><span class="line">            pageEntry.messaging.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">messagingEvent</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (messagingEvent.optin) &#123;</span><br><span class="line">                    receivedAuthentication(messagingEvent);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (messagingEvent.message) &#123;</span><br><span class="line">                    receivedMessage(messagingEvent);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (messagingEvent.postback) &#123;</span><br><span class="line">                    receivedPostback(messagingEvent);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">"Webhook received unknown messagingEvent: "</span>, messagingEvent);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        res.sendStatus(<span class="number">200</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">receivedMessage</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> senderId = event.sender.id;</span><br><span class="line">    <span class="keyword">var</span> content = event.message.text;</span><br><span class="line">    <span class="keyword">var</span> echo_message = <span class="string">"ECHO : "</span> + content;</span><br><span class="line">    sendTextMessage(senderId, echo_message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">receivedPostback</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"RECEIVED POSTBACK IT WORKS"</span>);</span><br><span class="line">    <span class="keyword">var</span> senderID = event.sender.id;</span><br><span class="line">    <span class="keyword">var</span> recipientID = event.recipient.id;</span><br><span class="line">    <span class="keyword">var</span> timeOfPostback = event.timestamp;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> payload = event.postback.payload;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Received postback for user %d and page %d with payload '%s' "</span> +</span><br><span class="line">        <span class="string">"at %d"</span>, senderID, recipientID, payload, timeOfPostback);</span><br><span class="line"></span><br><span class="line">    sendTextMessage(senderID, <span class="string">"Postback called"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendTextMessage</span>(<span class="params">recipientId, message</span>) </span>&#123;</span><br><span class="line">    request(&#123;</span><br><span class="line">        url: <span class="string">'https://graph.facebook.com/v2.6/me/messages'</span>,</span><br><span class="line">        qs: &#123; <span class="attr">access_token</span>: PAGE_ACCESS_TOKEN &#125;,</span><br><span class="line">        method: <span class="string">'POST'</span>,</span><br><span class="line">        json: &#123;</span><br><span class="line">            recipient: &#123; <span class="attr">id</span>: recipientId &#125;,</span><br><span class="line">            message: &#123; <span class="attr">text</span>: message &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error, response, body</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'Error sending message: '</span> + response.error);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'running on port'</span>, app.get(<span class="string">'port'</span>));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>app.js를 모두 작성하셨으면 Git을 이용하여 수정된 파일을 다시 배포해줍니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'echo bot'</span></span><br><span class="line">git push heroku master</span><br></pre></td></tr></table></figure></p>
-<p>이제 Echo bot이 완성되었습니다. </p>
-<p>페이스북을 통해서 메세지를 보내봅시다.</p>
-<p><img src="/images/echobot.png" alt="echo bot"></p>
-<h3 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h3><p>다음 글에서는 코드 분석 및 더 많은 페이스북 메신저 기능을 적용하는 법을 다루도록 하겠습니다.</p>
-<p>제가 다룬 코드는 제 <a href="https://github.com/KorChris/facebook_chatbot" target="_blank" rel="noopener">Github</a>에서 확인하실 수 있습니다.</p>
-<p>감사합니다.</p>
-<blockquote>
-<p>Ref : </p>
-<ol>
-<li><a href="https://www.sitepoint.com/building-facebook-chat-bot-node-heroku" target="_blank" rel="noopener">https://www.sitepoint.com/building-facebook-chat-bot-node-heroku</a></li>
-<li><a href="https://github.com/fbsamples/messenger-platform-samples" target="_blank" rel="noopener">https://github.com/fbsamples/messenger-platform-samples</a></li>
-<li><a href="https://github.com/jw84/messenger-bot-tutorial" target="_blank" rel="noopener">https://github.com/jw84/messenger-bot-tutorial</a></li>
-</ol>
-</blockquote>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cjm1nmnb2001zr25f1ei8kcww" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2017/06/29/FB_chatbot/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2017/06/29/FB_chatbot/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
-
-
-
-    <article id="post-Start Hexo" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/02/23/Start Hexo/">Hexo 시작하기</a>
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/02/23/Start Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo_intro.png)" alt="Hexo 시작하기" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="fb-comments-count" data-href="http://korchris.github.io/2017/02/23/Start Hexo/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/hexo/">hexo</a>
+            </div>
+            <div class="date"><time datetime="2017-02-23T06:32:22.000Z" itemprop="datePublished">2017-02-23</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/02/23/Start Hexo/">Hexo 시작하기</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2017/02/23/Start Hexo/">
-            <time datetime="2017-02-23T06:32:22.000Z" itemprop="datePublished">2017-02-23</time>
-        </a>
+        <p class="article-excerpt">
+            나만의 블로그Github을 모르던 시절, 제가 만들었던 코드를 저장할 수 있고 설명할 수 있는 개인 블로그를 가지고 싶었습니다. 그래서 처음에는 네이버 블로그로 시작했지만, code를 적기에는 너무나 협소한 환경이었고 Tistory에 초청받아 사용해보았지만 불편한 것은 여전했습니다.
+Github를 사용하기 시작하면서 markdown 언어를 알게 되었고 md
+        </p>
     </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/hexo/">hexo</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h3 id="나만의-블로그"><a href="#나만의-블로그" class="headerlink" title="나만의 블로그"></a>나만의 블로그</h3><p><a href="https://github.com" target="_blank" rel="noopener">Github</a>을 모르던 시절, 제가 만들었던 코드를 저장할 수 있고 설명할 수 있는 개인 블로그를 가지고 싶었습니다. 그래서 처음에는 네이버 블로그로 시작했지만, code를 적기에는 너무나 협소한 환경이었고 Tistory에 초청받아 사용해보았지만 불편한 것은 여전했습니다.</p>
-<p>Github를 사용하기 시작하면서 <code>markdown</code> 언어를 알게 되었고 md를 통해서 블로그를 만들 수 있으면 좋겠다고 생각하고 Github Page를 통해 블로그를 만들기로 했습니다.</p>
-<hr>
-<h3 id="Github-Github-Page-Hexo"><a href="#Github-Github-Page-Hexo" class="headerlink" title="Github? Github Page? Hexo?"></a>Github? Github Page? Hexo?</h3><p><code>Github</code>는 git을 사용하는 프로젝트를 지원하는 웹 호스팅 서비스이자 가장 인기있는 <code>오픈소스 코드 저장소</code>이기도 합니다. Github page는 사용자를 위해 static한 홈페이지(블로그)를 자동으로 만들어주고 이를 username.github.io으로 무료 호스팅해주는 서비스입니다. Hexo는 이 github pages를 이용한 블로그 프레임워크라고 말할 수 있죠. 초기 setting 후 간편한 명령어로 github에 deploy하면 자동으로 적용이 됩니다.</p>
-<hr>
-<h3 id="Hexo의-특징"><a href="#Hexo의-특징" class="headerlink" title="Hexo의 특징"></a>Hexo의 특징</h3><ol>
-<li>Blazing Fast<br>Nodejs를 사용하여 빠른 속도로 생성하고, 빌드하는데에 필요한 수백개의 파일이 수초안에 해결이 됩니다.</li>
-<li>Markdown Support<br>마크다운 언어를 지원합니다.</li>
-<li>One-Command Deployment<br>하나의 명령어로 Github Page, Heroku, 다른 사이트에 배포가 가능합니다.</li>
-<li>Various Plugin<br>Powerful한 플러그인들을 제공합니다.</li>
-</ol>
-<p>다양한 기능과 특징이 있지만 <strong>웹프로그래밍언어</strong> 지식이 없으시다면 사용하기가 굉장히 어려울 것이라고 생각됩니다. <code>HTML</code>, <code>CSS</code>, <code>JS</code>, <code>Git</code>에 대한 이해가 요구됩니다.</p>
-<h3 id="Hexo-설치하기"><a href="#Hexo-설치하기" class="headerlink" title="Hexo 설치하기"></a>Hexo 설치하기</h3><p>Hexo를 설치하기 위해서는 다음 2개의 요소가 필요합니다.<br>-<a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a><br>-<a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a><br>이미 설치가 되신 상태라면 터미널에 다음과 같은 명령어를 입력하시면 됩니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>자세한 설치 방법은 <a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">hexo hompage</a>를 참고해주시기 바랍니다.</p>
-<h3 id="Hexo-Setup하기"><a href="#Hexo-Setup하기" class="headerlink" title="Hexo Setup하기"></a>Hexo Setup하기</h3><p>먼저 Blog를 구성하는 파일들을 저장할 폴더를 만듭니다. Github에 배포하실 분은 폴더명을 <code>username.github.io</code>로 만드시는 것을 추천해드립니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init username.github.io</span><br><span class="line">$ <span class="built_in">cd</span> username.github.io</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>위의 절차를 거치셨다면 다음과 같은 디렉토리가 생성됩니다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<p>가장 기본적인 테마로 만들어진 여러분의 블로그 파일입니다.<br>확인해보고 싶으시다면 로컬서버로 이를 확인할 수 있습니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
-<p>후에<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
-<p>라는 문구가 뜨시면 <a href="localhost:4000" target="_blank" rel="noopener">localhost:4000</a>으로 들어가셔서 확인하실 수 있습니다.</p>
-<h3 id="글쓰기"><a href="#글쓰기" class="headerlink" title="글쓰기"></a>글쓰기</h3><p>먼저 글의 종류에는 다양하지만 일단 2가지를 설명하겠습니다.<br>-draft<br>draft는 말 그대로 초안문서로써 posting은 하지 않으나 source폴더내의 _draft폴더 안에서 관리합니다.<br>-post<br>post는 나의 Blog에 들어갈 문서입니다. 배포시에 Blog에 바로 적용이 됩니다.</p>
-<p>글을 쓸 때에는 터미널에서 명령어를 입력해서 시작할 수 있습니다.</p>
-<p>바로 post할 글을 쓰기 위해서는</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>초안문서를 먼저 만들고 싶으시다면<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &lt;filename&gt;</span><br></pre></td></tr></table></figure></p>
-<p>로 글을 작성하실 수 있습니다.<br>draft완성 후에 post로 옮기고 싶으시다면<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish &lt;filename&gt;</span><br></pre></td></tr></table></figure></p>
-<p>으로 _draft폴더에서 _post폴더로 옮길 수 있습니다.</p>
-<p>먼저 위의 글생성 명령어를 실행하시면 폴더내에 해당 파일 이름을 가진 <code>markdown</code>형식의 파일이 생성될 것입니다.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title : hexo init</span><br><span class="line">tags:</span><br><span class="line"><span class="code">    -hexo</span></span><br><span class="line">date : 2017/02/23</span><br><span class="line">---</span><br><span class="line">My First Hexo!!</span><br></pre></td></tr></table></figure>
-<p>위와 같이 자신이 원하는 대로 글을 수정하시면 글을 생성하는 것이 완료되는 형식입니다.</p>
-<h3 id="Github에-배포하기"><a href="#Github에-배포하기" class="headerlink" title="Github에 배포하기"></a>Github에 배포하기</h3><p>Github에 배포하기 위해서는 먼저 <code>hexo-deployer-git</code>이라는 플러그인이 필요합니다. 다른 플랫폼에 배포하기 원하시면 그에 해당하는 플러그인을 찾으신 후 설치하시면 됩니다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>그리고 <code>_config.yml</code>에서 Github 정보를 입력해주셔야 합니다.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    repo:</span> <span class="attr">https://github.com/KorChris/korchris.github.io.git</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p>위와 같이 본인의 git repo의 정보를 입력해주신 후에</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>정적파일을 생성해줍니다.</p>
-<p>혹시나 로컬서버에는 적용이 되는데 github에 적용이 되지 않으면 <code>hexo clean</code> 후에 <code>hexo generate</code>을 실행하시면 잘 되실꺼에요.</p>
-<p>생성이 완료되었다면 마지막으로</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>Deploy 명령어를 실행합니다. 디플로이가 완료가 되면 Github Repository와 Github Page에 적용된 것을 확인하실 수 있습니다.(약 1분의 시간이 걸릴 때도 있네요)</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://korchris.github.io/2017/02/23/Start Hexo/" data-id="cjm1nmn7x0008r25fa14f9539" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://korchris.github.io/2017/02/23/Start Hexo/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2017/02/23/Start Hexo/">0</span>&nbsp;Comments</a>
-    
-
-        </footer>
-    </div>
-    
 </article>
+    
+        </div>
+    
 
 
-</section>
+    </div></section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
             
                 
-<aside id="sidebar">
-   
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://facebook.com/korkorchris" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KorChris" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+    <div class="widgets-container">
         
+            
+                
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -1256,6 +489,7 @@
     
     
         <span style="background-image:url(/images/deep_learning.jpg)" alt="Glove, Global Vector for Word Representations (on work)" class="thumbnail-image"></span>
+    
     
 </a>
 
@@ -1276,6 +510,7 @@
     
         <span style="background-image:url(/images/deep_learning.jpg)" alt="Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)" class="thumbnail-image"></span>
     
+    
 </a>
 
                         </div>
@@ -1294,6 +529,7 @@
     
     
         <span style="background-image:url(/images/deep_learning.jpg)" alt="Efficient Estimation of Word Representations in Vector Space paper review (on work)" class="thumbnail-image"></span>
+    
     
 </a>
 
@@ -1314,6 +550,7 @@
     
         <span style="background-image:url(/images/deep_learning.jpg)" alt="딥러닝 기초 질문에 대한 답변달기" class="thumbnail-image"></span>
     
+    
 </a>
 
                         </div>
@@ -1333,6 +570,7 @@
     
         <span style="background-image:url(/images/chatbot_intro.jpeg)" alt="[챗봇] 페이스북 챗봇 만들기" class="thumbnail-image"></span>
     
+    
 </a>
 
                         </div>
@@ -1348,44 +586,48 @@
         </div>
     </div>
 
-    
-        
-    <div class="widget-wrap">
+            
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/chatbot/">chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
-    
-        
-    <div class="widget-wrap">
+
+            
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
-    
-        
-    <div class="widget-wrap">
+
+            
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Glove/">Glove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NLP/">NLP</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hierarchical-softmax/">hierarchical softmax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/negative-sampling/">negative sampling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/subsampling/">subsampling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word2vec/">word2vec</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
-    
-        
-    <div class="widget-wrap">
+
+            
+                
+    <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/DL/" style="font-size: 20px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 16.67px;">Deep Learning</a> <a href="/tags/Glove/" style="font-size: 10px;">Glove</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Machine-Learning/" style="font-size: 16.67px;">Machine Learning</a> <a href="/tags/NLP/" style="font-size: 16.67px;">NLP</a> <a href="/tags/Natural-Language-Processing/" style="font-size: 16.67px;">Natural Language Processing</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hierarchical-softmax/" style="font-size: 10px;">hierarchical softmax</a> <a href="/tags/negative-sampling/" style="font-size: 10px;">negative sampling</a> <a href="/tags/subsampling/" style="font-size: 10px;">subsampling</a> <a href="/tags/word2vec/" style="font-size: 13.33px;">word2vec</a>
         </div>
     </div>
 
-    
-        
+
+            
+                
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">links</h3>
         <div class="widget">
@@ -1400,17 +642,24 @@
     </div>
 
 
-    
-    <div id="toTop" class="fas fa-angle-up"></div>
-</aside>
-
             
+        
+    </div>
+</aside>
+                </div>
+            </div>
         </div>
         <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2018 KorChris<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 KorChris</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
         </div>
     </div>
 </footer>
@@ -1443,7 +692,6 @@
         <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
     
-
 
 
 <!-- Custom Scripts -->
