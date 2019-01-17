@@ -3,25 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Efficient Estimation of Word Representations in Vector Space paper review (on work) | Code Brewer</title>
+    <title>Noised Word Embedding | Code Brewer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Natural Language Processing,Machine Learning,Deep Learning,word2vec" />
+        <meta name="keywords" content="Natural Language Processing,Machine Learning,Deep Learning" />
     
-    <meta name="description" content="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Reviewpaper linkcontinuous work[word2vec]: https://arxiv.org/pdf/1301.3781.pdf[continue]: https://arxiv.org/pdf/1310.4546.">
-<meta name="keywords" content="Natural Language Processing,Machine Learning,Deep Learning,word2vec">
+    <meta name="description" content="Noised Word Embedding2345678910111213">
+<meta name="keywords" content="Natural Language Processing,Machine Learning,Deep Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Efficient Estimation of Word Representations in Vector Space paper review (on work)">
-<meta property="og:url" content="http://korchris.github.io/2018/09/13/word2vector_paper_review/index.html">
+<meta property="og:title" content="Noised Word Embedding">
+<meta property="og:url" content="http://korchris.github.io/2019/01/17/Noised_Word_Embedding/index.html">
 <meta property="og:site_name" content="Code Brewer">
-<meta property="og:description" content="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Reviewpaper linkcontinuous work[word2vec]: https://arxiv.org/pdf/1301.3781.pdf[continue]: https://arxiv.org/pdf/1310.4546.">
+<meta property="og:description" content="Noised Word Embedding2345678910111213">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://korchris.github.io/images/deep_learning.jpg">
-<meta property="og:updated_time" content="2019-01-17T13:12:49.338Z">
+<meta property="og:image" content="http://korchris.github.io/images/Noised_Word_Embedding/Noised%20Word%20Embedding.001.jpeg">
+<meta property="og:updated_time" content="2019-01-17T13:27:10.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Efficient Estimation of Word Representations in Vector Space paper review (on work)">
-<meta name="twitter:description" content="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Reviewpaper linkcontinuous work[word2vec]: https://arxiv.org/pdf/1301.3781.pdf[continue]: https://arxiv.org/pdf/1310.4546.">
-<meta name="twitter:image" content="http://korchris.github.io/images/deep_learning.jpg">
+<meta name="twitter:title" content="Noised Word Embedding">
+<meta name="twitter:description" content="Noised Word Embedding2345678910111213">
+<meta name="twitter:image" content="http://korchris.github.io/images/Noised_Word_Embedding/Noised%20Word%20Embedding.001.jpeg">
     
 
     
@@ -127,18 +127,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/DL/">DL</a>
+    <a class="page-title-link" href="/categories/research/">research</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-word2vector_paper_review" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Noised_Word_Embedding" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Efficient Estimation of Word Representations in Vector Space paper review (on work)
+        Noised Word Embedding
         </h1>
     
 
@@ -148,35 +148,30 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/09/13/word2vector_paper_review/" class="article-date">
-            <time datetime="2018-09-12T15:47:00.000Z" itemprop="datePublished">2018-09-13</time>
+        <a href="/2019/01/17/Noised_Word_Embedding/" class="article-date">
+            <time datetime="2019-01-17T13:32:00.000Z" itemprop="datePublished">2019-01-17</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>, <a class="tag-link" href="/tags/word2vec/">word2vec</a>
+        <a class="tag-link" href="/tags/Deep-Learning/">Deep Learning</a>, <a class="tag-link" href="/tags/Machine-Learning/">Machine Learning</a>, <a class="tag-link" href="/tags/Natural-Language-Processing/">Natural Language Processing</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review"><a href="#Efficient-Estimation-of-Word-Representations-in-Vector-Space-word2vec-Paper-Review" class="headerlink" title="Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review"></a>Efficient Estimation of Word Representations in Vector Space (word2vec) Paper Review</h1><p><a href="word2vec">paper link</a><br><a href="continue">continuous work</a><br>[word2vec]: <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1301.3781.pdf</a><br>[continue]: <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1310.4546.pdf</a></p>
-<hr>
-<h2 id="Short-Review"><a href="#Short-Review" class="headerlink" title="Short Review"></a>Short Review</h2><p>This paper propose two model architectures for computing continuous vector representations of words from very large data sets. The main goal of this paper is introducing high quality word vectors representation. This paper considers what language model to use such as NNLM, RNNLM, and Parallel training of NN. Rather using above LM, it proposed two log linear models.   </p>
-<p>First model is CBOW(Continuous bag of words model) it’s similar to the feedforward NNLM where the non-linear hidden layer is removed and the projection layer is shared for all words. CBOW model is for predicting the word from words around.   </p>
-<p>Second Model is Skip-Gram. It’s similar to CBOW but instead of predicting the current word based on the context, it tired to maximize classification of a word based on another word in the same sentence.</p>
-<hr>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><h3 id="Skip-Gram"><a href="#Skip-Gram" class="headerlink" title="Skip-Gram"></a>Skip-Gram</h3><h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4>
+            <h3 id="Noised-Word-Embedding"><a href="#Noised-Word-Embedding" class="headerlink" title="Noised Word Embedding"></a>Noised Word Embedding</h3><p><img src="images/Noised_Word_Embedding/Noised Word Embedding.002.jpeg" alt="Noised Word Embedding.002"><br>2<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.003.jpeg" alt="Noised Word Embedding.003"><br>3<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.004.jpeg" alt="Noised Word Embedding.004"><br>4<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.005.jpeg" alt="Noised Word Embedding.005"><br>5<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.006.jpeg" alt="Noised Word Embedding.006"><br>6<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.007.jpeg" alt="Noised Word Embedding.007"><br>7<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.008.jpeg" alt="Noised Word Embedding.008"><br>8<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.009.jpeg" alt="Noised Word Embedding.009"><br>9<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.010.jpeg" alt="Noised Word Embedding.010"><br>10<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.11.jpeg" alt="Noised Word Embedding.011"><br>11<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.012.jpeg" alt="Noised Word Embedding.012"><br>12<br><img src="images/Noised_Word_Embedding/Noised Word Embedding.013.jpeg" alt="Noised Word Embedding.013"><br>13</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-id="cjr0ngvzl00076w5f62wdjjkk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2019/01/17/Noised_Word_Embedding/" data-id="cjr0ngvz000036w5f3gryapuz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -243,7 +238,7 @@
     <section id="comments">
     
       
-    <div class="fb-comments" data-width="100%" data-href="http://korchris.github.io/2018/09/13/word2vector_paper_review/" data-num-posts="5"></div>
+    <div class="fb-comments" data-width="100%" data-href="http://korchris.github.io/2019/01/17/Noised_Word_Embedding/" data-num-posts="5"></div>
 
 
     
@@ -280,20 +275,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/09/20/glove/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Glove, Global Vector for Word Representations (on work)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/09/13/distributed_representations_of_words_and_phrases_and_their_compositionality/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/09/20/glove/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Distributed Representations of Words and Phrases and their Compositionality Paper Review(on work)</p>
+        <p class="article-nav-title">Glove, Global Vector for Word Representations (on work)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
