@@ -17,7 +17,7 @@
 <meta property="og:description" content="AlphaStar: Mastering 실시간 전략 게임 스타크래프트2게임은 수십 년 동안 인공 지능 시스템의 성능을 테스트하고 평가하는 중요한 방법으로 사용되어 왔습니다. 역량(capability)이 향상됨에 따라 연구 커뮤니티는 과학 및 실제 문제를 해결하는 데 필요한 다양한 지능 요소를 포착하는, 복잡성이 증가하는 게임을 찾아 왔습니다. 최근 몇 년 동">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://korchris.github.io/images/alphastar.jpg">
-<meta property="og:updated_time" content="2019-01-25T10:59:45.524Z">
+<meta property="og:updated_time" content="2019-01-25T11:04:49.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AlphaStar로 RTS 스타크래프트2 공략하기">
 <meta name="twitter:description" content="AlphaStar: Mastering 실시간 전략 게임 스타크래프트2게임은 수십 년 동안 인공 지능 시스템의 성능을 테스트하고 평가하는 중요한 방법으로 사용되어 왔습니다. 역량(capability)이 향상됨에 따라 연구 커뮤니티는 과학 및 실제 문제를 해결하는 데 필요한 다양한 지능 요소를 포착하는, 복잡성이 증가하는 게임을 찾아 왔습니다. 최근 몇 년 동">
@@ -173,11 +173,11 @@
 <p>게임을 플레이하는 방법은 여러 가지 방법이 있지만 가장 일반적인 방법은 5개의 게임에서 1v1 토너먼트를 하는 것입니다. 시작하려면 플레이어는 저그, 프로토스 또는 테란이라는 세 가지 “종족” 중 하나를 선택해야합니다. 각각의 종족들은 특색 있는 특성과 능력을 지니고 있습니다(프로 선수는 한 종족을 전문으로 하는 경향이 있지만요). 각 플레이어는 많은 유닛과 구조물을 만들고 새로운 기술을 창출 할 수 있는 기본 자원을 모으는 다수의 일꾼 유닛으로 시작합니다. 이것들은 플레이어가 자원을 수확 할 수 있게 해주며, 보다 정교한 기반과 구조를 만들고, 상대방을 속일 수 있는 새로운 능력을 개발합니다. 게임에서 이기기 위해서는 큰 그림을 그려 정교하게 자원을 관리해야 하며(Macro라 알려진 것), 각각의 유닛을 직접 컨트롤 하는 것(Micro라 알려진 것)을 잘 관리해야 합니다.</p>
 <p>장단기 목표의 균형을 맞추고 예상치 못한 상황에 적응해야하는 필요성 때문에 시스템은 종종 불안정하며 융통성이 없기도 합니다. 이 문제를 해결하기 위해서는 다음과 같은 몇 가지 인공 지능 연구 과제에서 혁신이 필요합니다.</p>
 <ul>
-<li>게임 이론 : 스타크래프트는 가위바위보처럼 최고의 전략이 없는 게임입니다. 따라서 인공지능 교육 과정은 전략적 지식의 영역을 지속적으로 탐구하고 확장해야합니다.</li>
-<li>불완전한 정보 : 플레이어가 모든 것을 볼 수있는 체스나 바둑 같은 게임과는 달리, 중요한 정보는 스타크래프트 플레이어에게 숨겨져 있으며 “정찰”로 직접 발견해야 합니다.</li>
-<li>장기 계획 : 많은 실제 문제와 마찬가지로 인과 관계가 즉각적인 것은 아닙니다. 또한 게임을 완료하는 데 최대 1시간이 걸릴 수 있으므로 게임 초기에 수행한 작업이 오랜 기간 동안 성과를 내지 못할 수 있습니다.</li>
-<li>실시간 : 선수가 후속 동작을 번갈아 번갈아하는 전통적인 보드 게임과 달리 스타크래프트 플레이어는 게임이 실시간으로 진행됨에 따라 계속해서 작업을 수행해야합니다.</li>
-<li>대규모 작업 공간 : 수백 개의 다른 유닛과 건물을 실시간으로 한 번에 제어해야하며 조합 가능성이 생깁니다. 또한 행동은 계층적이며 변경 및 보완 될 수 있습니다. 인공지능은 매 time step마다 10개에서 26가지의 행동을 합니다.</li>
+<li>*게임 이론** : 스타크래프트는 가위바위보처럼 최고의 전략이 없는 게임입니다. 따라서 인공지능 교육 과정은 전략적 지식의 영역을 지속적으로 탐구하고 확장해야합니다.</li>
+<li>*불완전한 정보** : 플레이어가 모든 것을 볼 수있는 체스나 바둑 같은 게임과는 달리, 중요한 정보는 스타크래프트 플레이어에게 숨겨져 있으며 “정찰”로 직접 발견해야 합니다.</li>
+<li>*장기 계획** : 많은 실제 문제와 마찬가지로 인과 관계가 즉각적인 것은 아닙니다. 또한 게임을 완료하는 데 최대 1시간이 걸릴 수 있으므로 게임 초기에 수행한 작업이 오랜 기간 동안 성과를 내지 못할 수 있습니다.</li>
+<li>*실시간** : 선수가 후속 동작을 번갈아 번갈아하는 전통적인 보드 게임과 달리 스타크래프트 플레이어는 게임이 실시간으로 진행됨에 따라 계속해서 작업을 수행해야합니다.</li>
+<li>*대규모 작업 공간 : 수백 개의 다른 유닛과 건물을 실시간으로 한 번에 제어해야하며 조합 가능성이 생깁니다. 또한 행동은 계층적이며 변경 및 보완 될 수 있습니다. 인공지능은 매 time step마다 10개에서 26가지의 행동을 합니다.</li>
 </ul>
 <p>이러한 엄청난 요구사항으로 인해 스타크래프트는 인공지능 연구를 위한 “큰 도전”으로 떠올랐습니다. 2009년 BroodWar API 출시 이후, 스타크래프트와 스타크래프트2가 현재 진행 중인 경쟁은 <a href="http://www.cs.mun.ca/~dchurchill/starcraftaicomp/history.shtml" target="_blank" rel="noopener">AIIDE 스타크래프트 AI 공모전</a>, <a href="https://cilab.sejong.ac.kr/sc_competition/" target="_blank" rel="noopener">CIG 스타크래프트 공모전</a>, <a href="https://sscaitournament.com/" target="_blank" rel="noopener">학생 스타크래프트 AI 토너먼트</a>, 그리고 <a href="https://sc2ai.net/" target="_blank" rel="noopener">스타크래프트2 AI Ladder</a>가 있습니다. 커뮤니티가 이러한 문제를 더욱 효과적으로 해결할 수 있도록 2016년과 2017년에 블리자드와 협력하여 <a href="https://deepmind.com/blog/deepmind-and-blizzard-open-starcraft-ii-ai-research-environment/" target="_blank" rel="noopener">PySC2</a>로 알려진 오픈소스 도구 세트를 출시했습니다. 여기에는 지금까지 출시 된 익명의 게임 리플레이 세트가 포함됩니다. 저희는 AlphaStar를 제작하기위해 엔지니어링 및 알고리즘 혁신을 결합하여 이 작업을 수행했습니다.</p>
 <p><img src="/images/alphastar_interface.gif" alt="alphastar_interface"><br><em>MaNa와의 2번째 경기 중 AlphaStar가 플레이하는 게임을 시각화한 모습. 즉, neural network에 있는 그대로의 화면을 input으로 넣어주고, neural network를 활성화시키고, AlphaStar가 클릭 할 위치와 대상, 그리고 예측된 결과와 같은 출력 값을 가질 수 있다. 그림에는 MaNa의 화면이 보이지만, AlphaStar는 이에 접근할 수 없다.</em></p>
@@ -187,7 +187,7 @@
 <p>그런 다음 멀티 에이전트 reinforcement learning을 통해 학습을 시작하였습니다. 지속적으로 리그가 생성되며 에이전트들은 경쟁자와 맞서 게임을 하게 됩니다. <a href="https://starcraft2.com/en-us/ladder/grandmaster/1" target="_blank" rel="noopener">Starcraft Ladder</a>와 같이, 에이전트들은 사람처럼 스타크래프트를 플레이하게 되는 것입니다. 새로운 경쟁자들이 계속해서 리그에 등장하게 되며, 새로운 경쟁자들은 원래의 에이전트들에게서 branch 되어 나옵니다. 각 에이전트들은 경쟁을 통해 학습을 진행하게 됩니다. <a href="https://deepmind.com/blog/capture-the-flag/" target="_blank" rel="noopener">Population-based reinforcement learning</a>의 아이디어를 가져온 새로운 형태의 학습 과정으로, 각 에이전트가 가진 가장 강력한 전술을 상대하고, 빨리 상대방을 무릎을 꿇게 함과 동시에 지속적으로 스타크래프트의 방대한 양의 전술을 익히고 경험하게 됩니다.</p>
 <p><img src="/images/alphastar_mmr.png" alt="MMR"><br><em>추측 MMR(Match Making Rating)은 대략적인 플레이어의 실력을 측정한 것으로써, 현재 블리자드 온라인 리그와 비교를 해보았습니다.</em></p>
 <p>리그가 진행되고 새로운 경쟁자가 만들어지면 이전 전략을 무력화 할 수 있는 새로운 대응 전략이 등장합니다. 일부 새로운 에이전트는 이전 전략을 단순화 한 전략을 실행하는 반면 다른 일부 에이전트는 새로운 빌드(전략)과 유닛 구성 및 micro-관리하는 방법 등 획기적인 새로운 전략을 발견했습니다. </p>
-<p>예를 들면, AlphaStar 리그 초반에는 <a href="https://liquipedia.net/starcraft2/Photon_Cannon_(Legacy_of_the_Void" target="_blank" rel="noopener">광자포</a>)과 <a href="https://liquipedia.net/starcraft2/Dark_Templar_(Legacy_of_the_Void" target="_blank" rel="noopener">암흑 기사</a>)를 이용하여 빠르게 적을 공략하는 “Cheesy”(역주: 싸구려) 전략이 선호되었습니다. 하지만 이러한 위험한 전략은 훈련이 진행됨에 따라 폐기되어 다른 전략을 이끌어 냈습니다. 예를 들어, 더 많은 일꾼들로 기지를 과도하게 확장함으로써 경제적 힘을 얻거나 두 마리의 <a href="https://liquipedia.net/starcraft2/Oracle_(Legacy_of_the_Void" target="_blank" rel="noopener">예언자</a>)(역주. 일꾼 사냥에 좋은 유닛)을 통해 상대방의 일꾼과 경제를 혼란스럽게 합니다. 이 과정은 스타크래프트가 출시 된 이후로 플레이어가 새로운 전략을 발견하고 이전에 선호했던 전략을 버렸던 것과 유사합니다.</p>
+<p>예를 들면, AlphaStar 리그 초반에는 <a href="https://liquipedia.net/starcraft2/Photon_Cannon" target="_blank" rel="noopener">광자포</a>과 <a href="https://liquipedia.net/starcraft2/Dark_Templar" target="_blank" rel="noopener">암흑 기사</a>를 이용하여 빠르게 적을 공략하는 “Cheesy”(역주: 싸구려) 전략이 선호되었습니다. 하지만 이러한 위험한 전략은 훈련이 진행됨에 따라 폐기되어 다른 전략을 이끌어 냈습니다. 예를 들어, 더 많은 일꾼들로 기지를 과도하게 확장함으로써 경제적 힘을 얻거나 두 마리의 <a href="https://liquipedia.net/starcraft2/Oracle" target="_blank" rel="noopener">예언자</a>(역주. 일꾼 사냥에 좋은 유닛)을 통해 상대방의 일꾼과 경제를 혼란스럽게 합니다. 이 과정은 스타크래프트가 출시 된 이후로 플레이어가 새로운 전략을 발견하고 이전에 선호했던 전략을 버렸던 것과 유사합니다.</p>
 <p><img src="/images/alphastar_unit.png" alt="unit"><br>훈련이 진행됨에 따라 AlphaStar가 만드는 유닛의 조합이 바뀌었습니다.</p>
 <p>리그의 다양성을 장려하기 위해 각 에이전트는 자체 학습 목표를 가지고 있습니다. 예를 들어, 어떤 에이전트는 다른 한 에이전트를 이겨야만 하는 추가적인 내부 motivation을 추가해줍니다. 한 에이전트는 특정 경쟁자를 이길 수 있는 목표를 가질 수 있지만 다른 에이전트는 대다수의 에이전트를 이겨야하는 경우도 있습니다. 그렇게 하기 위해서는 특정 유닛을 더 많이 만들어야 합니다. 이러한 학습 목표는 학습 과정에서 조정됩니다.</p>
 <p><img src="/images/alphastar_strategymap.png" alt="strategy map"><br>AlphaStar 리그의 경쟁자를 보여주는 visualization. TLO 및 MaNa와 경쟁을 한 에이전트에는 특별히 레이블이 지정됩니다.(html을 긁어오기가 힘들어서 사진 캡처로 대체. detail in <a href="https://deepmind.com/blog/alphastar-mastering-real-time-strategy-game-starcraft-ii/" target="_blank" rel="noopener">본문</a>)</p>
@@ -222,7 +222,7 @@
 
 
 
-    <a data-url="http://korchris.github.io/2019/01/25/Alphastar/" data-id="cjrbxpxco002aci5fpu1p0i93" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2019/01/25/Alphastar/" data-id="cjrbxw6m30028gy5fnk73kxw1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
