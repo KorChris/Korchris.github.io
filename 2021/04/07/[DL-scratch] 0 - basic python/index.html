@@ -6,10 +6,10 @@
     <title>[DL:scratch] 0 - basic python | Code Brewer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Deep Learning,Machine Learning,ML,DL,Python" />
+        <meta name="keywords" content="ML,DL,Machine Learning,Deep Learning,Python" />
     
     <meta name="description" content="Deep Learning from scratch : Plan  Basic Python for Deep Learning Deep Learning을 위한 python을 기본적으로 다루는 방법을 배웁니다.    Perceptron Perceptron을 통해 weight와 bias를 배우고 퍼셉트론의 한계, 그리고 다층 perceptron을 다룹니다.   Neur">
-<meta name="keywords" content="Deep Learning,Machine Learning,ML,DL,Python">
+<meta name="keywords" content="ML,DL,Machine Learning,Deep Learning,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[DL:scratch] 0 - basic python">
 <meta property="og:url" content="http://korchris.github.io/2021/04/07/[DL-scratch] 0 - basic python/index.html">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="Deep Learning from scratch : Plan  Basic Python for Deep Learning Deep Learning을 위한 python을 기본적으로 다루는 방법을 배웁니다.    Perceptron Perceptron을 통해 weight와 bias를 배우고 퍼셉트론의 한계, 그리고 다층 perceptron을 다룹니다.   Neur">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://korchris.github.io/images/DL_scratch/DL_scratch_0_000.jpg">
-<meta property="og:updated_time" content="2021-04-07T12:41:33.058Z">
+<meta property="og:updated_time" content="2021-04-07T12:50:28.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[DL:scratch] 0 - basic python">
 <meta name="twitter:description" content="Deep Learning from scratch : Plan  Basic Python for Deep Learning Deep Learning을 위한 python을 기본적으로 다루는 방법을 배웁니다.    Perceptron Perceptron을 통해 weight와 bias를 배우고 퍼셉트론의 한계, 그리고 다층 perceptron을 다룹니다.   Neur">
@@ -218,18 +218,18 @@ ga('send', 'pageview');
 </ol>
 <h1 id="Basic-python-for-Deep-Learning"><a href="#Basic-python-for-Deep-Learning" class="headerlink" title="Basic python for Deep Learning"></a>Basic python for Deep Learning</h1><p>Deep Learning을 직접 다루어보기 위해 쓰는 programming language는 다양한 것이 있지만, 본 블로그에서는 python을 다루기로 합니다.</p>
 <h2 id="Colab"><a href="#Colab" class="headerlink" title="Colab"></a>Colab</h2><p>python을 직접 실행하기 위해서도 다양한 방법이 있지만, google에서 지원하는 <a href="https://colab.research.google.com/" target="_blank" rel="noopener">Colab</a>을 사용하여 브라우저에서 손쉽게 실행할 수 있는 방법을 쓰기로 하겠습니다. </p>
-<p><img src="/images/DL_0_001.jpg" alt="Colab"></p>
+<p><img src="/images/DL_scratch/DL_scratch_0_001.jpg" alt="Colab"></p>
 <p>‘새 노트’를 눌러서 python을 실행시킬 수 있는 창을 띄운 뒤에 단순한 계산을 실행시켜보겠습니다.</p>
-<p><img src="/images/DL_0_002.jpg" alt="simple_sum"></p>
+<p><img src="/images/DL_scratch/DL_scratch_0_002.jpg" alt="simple_sum"></p>
 <p>1+2를 입력하고 왼쪽의 재생버튼을 누르시면, 3이라는 결과가 하단에 뜨게 됩니다.<br>화면에서 보시는 것처럼, 1+2를 입력하는 상자안에 입력하는 것을 ‘코드’라 하며, 한줄 뿐만 아니라 여러줄을 입력하여 한번에 실행시킬 수 있습니다.</p>
 <p>이제부터는 화면으로 보여드리는 것보다 상자안에 입력할 것을 다음과 같은 포맷으로 보여드릴 예정입니다.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>+<span class="number">2</span></span><br><span class="line"><span class="number">3</span>*<span class="number">8</span></span><br><span class="line"><span class="number">15</span>/<span class="number">2</span></span><br><span class="line"><span class="number">5</span> ** <span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p>위의 코드를 입력해보시고 결과를 확인해보면 다음과 같은 결과가 나오게 됩니다.</p>
-<p><img src="/images/DL_0_003.jpg" alt="simple_calculations"></p>
+<p><img src="/images/DL_scratch/DL_scratch_0_003.jpg" alt="simple_calculations"></p>
 <p>625는 맨 마지막줄 계산의 결과입니다.<br>저희가 상단에 써놓았던 모든 수식의 결과를 보려면, 각각 계산의 결과를 ‘변수’라는 것에 저장한 뒤에, 확인하는 작업이 필요합니다. 다음과 같이 코드를 작성하여 봅시다.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>+<span class="number">2</span></span><br><span class="line">b = <span class="number">3</span>*<span class="number">8</span></span><br><span class="line">c = <span class="number">15</span>/<span class="number">2</span></span><br><span class="line">d = <span class="number">5</span> ** <span class="number">4</span></span><br><span class="line"></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
 <p>그렇다면 다음과 같은 결과가 나오게 됩니다.</p>
-<p><img src="/images/DL_0_004.jpg" alt="using_variations"></p>
+<p><img src="/images/DL_scratch/DL_scratch_0_004.jpg" alt="using_variations"></p>
 <p>이와같이 프로그래밍은, ‘변수’라는 것을 선언하고 자신이 원하는 ‘작업’을 ‘변수’안에 저장한 뒤, 그 작업의 결과인 ‘변수’를 출력함으로써 원하는 결과를 얻는 것이라고 볼 수 있습니다. </p>
 <h2 id="Type-of-Data"><a href="#Type-of-Data" class="headerlink" title="Type of Data"></a>Type of Data</h2><p>python 안에서 사용할 수 있는 Data의 type에는 다양한 것들이 있습니다.</p>
 <p>여러개의 data를 한줄로 줄세워서 저장할 수 있는 List형<br>여러개의 data를 key, value로 나누어서 원하는 value를 찾기 위해 key라는 것을 사용할 수 있는 dictionary형<br>참과 거짓을 뜻하는 bool형이 대표적이며, int, float와 같은 숫자 표현형, 그리고 ‘문자열’을 뜻하는 string형이 있습니다.</p>
@@ -247,7 +247,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://korchris.github.io/2021/04/07/[DL-scratch] 0 - basic python/" data-id="ckn7g51on00380zcjhkff2gwb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2021/04/07/[DL-scratch] 0 - basic python/" data-id="ckn7g9c63000z6ucjbx70tga5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
