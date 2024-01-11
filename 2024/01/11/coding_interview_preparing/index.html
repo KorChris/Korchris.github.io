@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>코딩 인터뷰 준비 | Code Brewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="코딩 인터뷰 준비##문제 1 66.Plus One You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to">
+<meta name="keywords" content="Coding,Python,Interview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="코딩 인터뷰 준비">
+<meta property="og:url" content="http://korchris.github.io/2024/01/11/coding_interview_preparing/index.html">
+<meta property="og:site_name" content="Code Brewer">
+<meta property="og:description" content="코딩 인터뷰 준비##문제 1 66.Plus One You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://korchris.github.io/images/deep_learning.jpg">
+<meta property="og:updated_time" content="2024-01-11T07:32:29.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="코딩 인터뷰 준비">
+<meta name="twitter:description" content="코딩 인터뷰 준비##문제 1 66.Plus One You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to">
+<meta name="twitter:image" content="http://korchris.github.io/images/deep_learning.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-133241164-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Code Brewer</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/chanung_jeong.png" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/chanung_jeong.png" />
+            <h2 id="name">Chanung Jeong</h2>
+            <h3 id="title">A.I. Scientist in Standigm.</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Seoul, South Korea</span>
+            <a id="follow" target="_blank" href="https://github.com/korchris/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                9
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                23
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/korchris/korchris" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-coding_interview_preparing" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            코딩 인터뷰 준비
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2024/01/11/coding_interview_preparing/">
+            <time datetime="2024-01-11T05:47:00.000Z" itemprop="datePublished">2024-01-11</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/Coding/">Coding</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Coding/">Coding</a>, <a class="tag-link" href="/tags/Interview/">Interview</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="코딩-인터뷰-준비"><a href="#코딩-인터뷰-준비" class="headerlink" title="코딩 인터뷰 준비"></a>코딩 인터뷰 준비</h1><p>##문제 1</p>
+<p><a href="[https://leetcode.com/problems/plus-one/description/]">66.Plus One</a></p>
+<p>You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0’s.</p>
+<p>Increment the large integer by one and return the resulting array of digits.</p>
+<p>Example 1:</p>
+<p>Input: digits = [1,2,3]<br>Output: [1,2,4]<br>Explanation: The array represents the integer 123.<br>Incrementing by one gives 123 + 1 = 124.<br>Thus, the result should be [1,2,4].</p>
+<p>Example 2:</p>
+<p>Input: digits = [4,3,2,1]<br>Output: [4,3,2,2]<br>Explanation: The array represents the integer 4321.<br>Incrementing by one gives 4321 + 1 = 4322.<br>Thus, the result should be [4,3,2,2].</p>
+<p>Example 3:</p>
+<p>Input: digits = [9]<br>Output: [1,0]<br>Explanation: The array represents the integer 9.<br>Incrementing by one gives 9 + 1 = 10.<br>Thus, the result should be [1,0].</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= digits.length &lt;= 100
+0 &lt;= digits[i] &lt;= 9
+digits does not contain any leading 0&apos;s.
+</code></pre><hr>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>배열로 숫자가 전해지고 단순히 1을 더하여 그 결과의 숫자를 다시 배열로 내보내는 것.<br>배열을 숫자로, 숫자를 배열로 바꾸는 방법을 물어보는 듯했다.<br>나는 리스트의 전체 크기를 보고 몇자리수까지 채워지는지 보고, 10의 n승을 곱하면서 숫자를 만들어주고 작업을 진행했다.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plusOne</span><span class="params">(self, digits: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        sum = <span class="number">0</span></span><br><span class="line">        length = len(digits)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">for</span> i, d <span class="keyword">in</span> enumerate(digits):</span><br><span class="line">            sum += d*<span class="number">10</span>**(length-i)</span><br><span class="line">        sum+=<span class="number">1</span></span><br><span class="line">        result = list(map(int, str(sum)))</span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure></p>
+<p>map을 어떻게 활용하는지 좀 헷갈린다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 리스트에 값을 하나씩 더해서 새로운 리스트를 만드는 작업</span></span><br><span class="line">myList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># for 반복문 이용</span></span><br><span class="line">result1 = []</span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> myList:</span><br><span class="line">    result1.append(val + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">f'result1 : <span class="subst">&#123;result1&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># map 함수 이용</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_one</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result2 = list(map(add_one, myList))  <span class="comment"># map반환을 list 로 변환</span></span><br><span class="line">print(<span class="string">f'result2 : <span class="subst">&#123;result2&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+<p>함수의 동작은 두 번째 인자로 들어온 반복 가능한 자료형 (리스트나 튜플)을 첫 번째 인자로 들어온 함수에 하나씩 집어넣어서 함수를 수행하는 함수입니다.</p>
+<p>출처: <a href="https://blockdmask.tistory.com/531" target="_blank" rel="noopener">https://blockdmask.tistory.com/531</a> [개발자 지망생:티스토리]</p>
+<hr>
+<p>내가 이렇게 할 수도 있지 않을까라고 해서 찾아본 솔루션.<br>각각 곱하기 더하기를 해주는 것으로 배열을 숫자로 가져오는 것이 아닌<br>더 단순한 방법으로 배열을 숫자로 가져오는 방법.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plusOne</span><span class="params">(self, digits)</span>:</span></span><br><span class="line">        strings = <span class="string">""</span></span><br><span class="line">        <span class="keyword">for</span> number <span class="keyword">in</span> digits:</span><br><span class="line">            strings += str(number) <span class="comment"># digits안에 있는 숫자들을 str화 하여 빈 string안에 넣어주고</span></span><br><span class="line"></span><br><span class="line">        temp = str(int(strings) +<span class="number">1</span>) <span class="comment"># int로 잠깐 변환시켜 준 후 +1을 해준뒤</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> [int(temp[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(temp))] <span class="comment"># str들을 int 배열로 바꾼 뒤 리턴.</span></span><br></pre></td></tr></table></figure>
+<p>금방 풀 수 있었지만 조금 아쉬웠던 문제</p>
+<hr>
+<p>하지만 이 문제에서 시간을 시간 정도 쏟아부었음에도 세번째 에러 케이스는 해결하지 못했다.<br>그 원인도 찾아보지 못함. 아마 내 알고리즘에서의 문제였을 것임.</p>
+<p>##문제 2</p>
+<p><a href="[https://](https://leetcode.com/problems/find-and-replace-in-string/">833. Find And Replace in String</a>)<br>Medium</p>
+<p>You are given a 0-indexed string s that you must perform k replacement operations on. The replacement operations are given as three 0-indexed parallel arrays, indices, sources, and targets, all of length k.</p>
+<p>To complete the ith replacement operation:</p>
+<pre><code>Check if the substring sources[i] occurs at index indices[i] in the original string s.
+If it does not occur, do nothing.
+Otherwise if it does occur, replace that substring with targets[i].
+</code></pre><p>For example, if s = “abcd”, indices[i] = 0, sources[i] = “ab”, and targets[i] = “eee”, then the result of this replacement will be “eeecd”.</p>
+<p>All replacement operations must occur simultaneously, meaning the replacement operations should not affect the indexing of each other. The testcases will be generated such that the replacements will not overlap.</p>
+<pre><code>For example, a testcase with s = &quot;abc&quot;, indices = [0, 1], and sources = [&quot;ab&quot;,&quot;bc&quot;] will not be generated because the &quot;ab&quot; and &quot;bc&quot; replacements overlap.
+</code></pre><p>Return the resulting string after performing all replacement operations on s.</p>
+<p>A substring is a contiguous sequence of characters in a string.</p>
+<p>Example 1:</p>
+<p>Input: s = “abcd”, indices = [0, 2], sources = [“a”, “cd”], targets = [“eee”, “ffff”]<br>Output: “eeebffff”<br>Explanation:<br>“a” occurs at index 0 in s, so we replace it with “eee”.<br>“cd” occurs at index 2 in s, so we replace it with “ffff”.</p>
+<p>Example 2:</p>
+<p>Input: s = “abcd”, indices = [0, 2], sources = [“ab”,”ec”], targets = [“eee”,”ffff”]<br>Output: “eeecd”<br>Explanation:<br>“ab” occurs at index 0 in s, so we replace it with “eee”.<br>“ec” does not occur at index 2 in s, so we do nothing.</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= s.length &lt;= 1000
+k == indices.length == sources.length == targets.length
+1 &lt;= k &lt;= 100
+0 &lt;= indexes[i] &lt; s.length
+1 &lt;= sources[i].length, targets[i].length &lt;= 50
+s consists of only lowercase English letters.
+sources[i] and targets[i] consist of only lowercase English letters.
+</code></pre><hr>
+<h3 id="Try"><a href="#Try" class="headerlink" title="Try"></a>Try</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findReplaceString</span><span class="params">(self, s: str, indices: List[int], sources: List[str], targets: List[str])</span> -&gt; str:</span></span><br><span class="line">        result = <span class="string">''</span></span><br><span class="line">        new_s = copy.deepcopy(s)</span><br><span class="line">        <span class="keyword">for</span> i, c <span class="keyword">in</span> enumerate(sources):</span><br><span class="line">            l = []</span><br><span class="line">            <span class="keyword">for</span> z <span class="keyword">in</span> re.finditer(c,s):</span><br><span class="line">                l.append(z.start())</span><br><span class="line">            <span class="keyword">if</span> len(l) &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">for</span> n <span class="keyword">in</span> l:</span><br><span class="line">                    <span class="keyword">if</span> n <span class="keyword">not</span> <span class="keyword">in</span> indices:</span><br><span class="line">                        l.remove(n)</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">in</span> s:</span><br><span class="line">                <span class="keyword">if</span> l[<span class="number">0</span>] <span class="keyword">in</span> indices:</span><br><span class="line">                    new_s = new_s.replace(sources[i], targets[i])</span><br><span class="line">        <span class="keyword">return</span> new_s</span><br></pre></td></tr></table></figure>
+<p>어떻게든 문제를 풀어가는 쪽으로 알고리즘을 짜다보니까 처음에 생각했던대로 코딩이 되지 않았다.<br>원래 문자열에서 시키는 대로 대체 시키고, 변화되지 않은 것들을 지우고 착실히 해나갔어야 했는데..<br>문제 조건을 제대로 읽지 못해서 indices, sources, targets의 길이가 항상 같다는 것도 못 알아챘다.</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findReplaceString</span><span class="params">(self, S, indices, sources, targets)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type indexes: List[int]</span></span><br><span class="line"><span class="string">        :type sources: List[str]</span></span><br><span class="line"><span class="string">        :type targets: List[str]</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        modified = list(S)</span><br><span class="line">        <span class="keyword">for</span> index, source, target <span class="keyword">in</span> zip(indices, sources, targets):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> S[index:].startswith(source):</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                modified[index] = target</span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> range(index+<span class="number">1</span>, len(source) + index):</span><br><span class="line">                    modified[i] = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(modified)</span><br></pre></td></tr></table></figure>
+<p>modified라는 배열을 하나 만들어 준다음,<br>모든 길이가 같은 indices, sources, targets를 같이 써주면서 modified를 철저하게 바꿔나갔다.<br><figure class="highlight plain"><figcaption><span>조건까지는 나도 초반에는 써봤지만, 감을 잃었던 것 같다.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">아무튼 ```modified[index] = target```까지는 바로 이해가 갔는데, </span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">for i in range(index+1, len(source) + index):</span><br><span class="line">  modified[i] = &quot;&quot;</span><br></pre></td></tr></table></figure></p>
+<p>가 잘 이해가 안 간다.<br>modified가 리스트니까, index부분을 targets로 바꿔준 뒤, modified[index+1]의 부분에 d가 남아있으면 안되기 때문에 source의 length만큼 “”빈칸으로 처리해준 것..<br>소스를 보면 바로 이해가 가지만, 저런 처리방법을 생각하지 못했다. 습득하기.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://korchris.github.io/2024/01/11/coding_interview_preparing/" data-id="clr8w7rx400111vi9h9xio00z" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://korchris.github.io/2024/01/11/coding_interview_preparing/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2024/01/11/coding_interview_preparing/">0</span>&nbsp;Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2021/08/10/M1_chrome_issue/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">M1 맥북 오류 / 크롬 오류 / 빨간 줄 / 빨간 썸네일 해결 방법</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div class="fb-comments" data-width="100%" data-href="http://korchris.github.io/2024/01/11/coding_interview_preparing/" data-num-posts="5"></div>
+
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2024/01/11/coding_interview_preparing/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="코딩 인터뷰 준비" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Coding/">Coding</a></p>
+                            <p class="item-title"><a href="/2024/01/11/coding_interview_preparing/" class="title">코딩 인터뷰 준비</a></p>
+                            <p class="item-date"><time datetime="2024-01-11T05:47:00.000Z" itemprop="datePublished">2024-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/08/10/M1_chrome_issue/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/M1/">M1</a></p>
+                            <p class="item-title"><a href="/2021/08/10/M1_chrome_issue/" class="title">M1 맥북 오류 / 크롬 오류 / 빨간 줄 / 빨간 썸네일 해결 방법</a></p>
+                            <p class="item-date"><time datetime="2021-08-09T17:41:00.000Z" itemprop="datePublished">2021-08-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/04/07/[DL-scratch] 0 - basic python/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/DL_scratch/DL_scratch_0_000.jpg)" alt="[DL:scratch] 0 - basic python" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></p>
+                            <p class="item-title"><a href="/2021/04/07/[DL-scratch] 0 - basic python/" class="title">[DL:scratch] 0 - basic python</a></p>
+                            <p class="item-date"><time datetime="2021-04-07T14:00:00.000Z" itemprop="datePublished">2021-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/03/15/Google_Certificate/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/google_certificate.png)" alt="Google Certificate for ML" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a></p>
+                            <p class="item-title"><a href="/2020/03/15/Google_Certificate/" class="title">Google Certificate for ML</a></p>
+                            <p class="item-date"><time datetime="2020-03-15T05:22:00.000Z" itemprop="datePublished">2020-03-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/03/15/chat_with_chatGPT/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/chatGPT/chatGPT.png)" alt="chatGPT의 놀라운 대화능력에 대한 실험" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a></p>
+                            <p class="item-title"><a href="/2020/03/15/chat_with_chatGPT/" class="title">chatGPT의 놀라운 대화능력에 대한 실험</a></p>
+                            <p class="item-date"><time datetime="2020-03-15T05:22:00.000Z" itemprop="datePublished">2020-03-15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chatbot/">Chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coding/">Coding</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/M1/">M1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlphaStar/">AlphaStar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certificate/">Certificate</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-issue/">Chrome issue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-line/">Chrome red line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-thumbnail/">Chrome red thumbnail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Mind/">Deep Mind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-learning/">Deep learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/M1/">M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Macbook/">Macbook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-learning/">Machine learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/">Pytorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reinforcement-learning/">Reinforcement_learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AlphaStar/" style="font-size: 10px;">AlphaStar</a> <a href="/tags/Certificate/" style="font-size: 15px;">Certificate</a> <a href="/tags/Chrome-issue/" style="font-size: 10px;">Chrome issue</a> <a href="/tags/Chrome-red-line/" style="font-size: 10px;">Chrome red line</a> <a href="/tags/Chrome-red-thumbnail/" style="font-size: 10px;">Chrome red thumbnail</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 20px;">Deep Learning</a> <a href="/tags/Deep-Mind/" style="font-size: 10px;">Deep Mind</a> <a href="/tags/Deep-learning/" style="font-size: 10px;">Deep learning</a> <a href="/tags/Interview/" style="font-size: 10px;">Interview</a> <a href="/tags/M1/" style="font-size: 10px;">M1</a> <a href="/tags/ML/" style="font-size: 15px;">ML</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Machine-learning/" style="font-size: 15px;">Machine learning</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/Reinforcement-learning/" style="font-size: 10px;">Reinforcement_learning</a> <a href="/tags/Tensorflow/" style="font-size: 15px;">Tensorflow</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2024 KorChris<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

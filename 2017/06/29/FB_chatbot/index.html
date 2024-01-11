@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="Code Brewer">
 <meta property="og:description" content="나만의 페이스북 메신저 봇 만들기2020.03.19 Updates 수정사항 : 원래 사용했던 nodejs 대신 python을 이용합니다. 이 글은 Python, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다.  챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://korchris.github.io/images/chatbot_intro.jpeg">
-<meta property="og:updated_time" content="2020-11-19T10:24:33.000Z">
+<meta property="og:image" content="http://korchris.github.io/images/facebook_chatbot/chatbot_intro.jpeg">
+<meta property="og:updated_time" content="2024-01-11T07:32:32.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[챗봇] 페이스북 챗봇 만들기">
 <meta name="twitter:description" content="나만의 페이스북 메신저 봇 만들기2020.03.19 Updates 수정사항 : 원래 사용했던 nodejs 대신 python을 이용합니다. 이 글은 Python, Heroku server를 이용하여 자신만의 페이스북 챗봇을 만들어보는 템플릿 예제입니다.  챗봇이란?챗봇은 사용자가 별도로 웹사이트나 앱을 따로 실행하지 않고도 대화하듯 정보를 얻을 수 있는 서비">
-<meta name="twitter:image" content="http://korchris.github.io/images/chatbot_intro.jpeg">
+<meta name="twitter:image" content="http://korchris.github.io/images/facebook_chatbot/chatbot_intro.jpeg">
     
 
     
@@ -172,11 +172,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                7
+                9
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                21
+                23
                 <span>tags</span>
             </div>
         </div>
@@ -284,60 +284,60 @@ ga('send', 'pageview');
 <h3 id="페이스북-설정"><a href="#페이스북-설정" class="headerlink" title="페이스북 설정"></a>페이스북 설정</h3><ol>
 <li><a href="developer.facebook.com">Facebook Developer Page</a>에 접속한 후 <em>Create App</em>을 눌러줍니다. </li>
 </ol>
-<p><img src="/images/create_app.png" alt="Create App"></p>
+<p><img src="/images/facebook_chatbot/create_app.png" alt="Create App"></p>
 <ol start="2">
 <li>App의 이름을 정해준 후에 <em>Create App ID</em>를 누릅니다.</li>
 </ol>
-<p><img src="/images/create_app_id.png" alt="Create App ID"></p>
+<p><img src="/images/facebook_chatbot/create_app_id.png" alt="Create App ID"></p>
 <ol start="3">
 <li>App이 만들어졌다면 다음과 같은 화면에서 Messenger의 <em>Set Up</em> 버튼을 눌러줍니다.</li>
 </ol>
-<p><img src="/images/messenger_setup.png" alt="Messenger Set Up"></p>
+<p><img src="/images/facebook_chatbot/messenger_setup.png" alt="Messenger Set Up"></p>
 <ol start="4">
 <li>Access Tokens 내부 화면에서 <em>Create New Page</em>를 눌러서 페이지 생성을 진행합니다.</li>
 </ol>
-<p><img src="/images/access_tokens.png" alt="Access Tokens"><br><img src="/images/create_new_page.png" alt="Create New Page"><br><img src="/images/public_figure.png" alt="Public Figure"><br><img src="/images/page_setting.png" alt="Page Setting"><br><img src="/images/skip_photo.png" alt="Skip Photo"><br><img src="/images/page_done.png" alt="Page Done"></p>
+<p><img src="/images/facebook_chatbot/access_tokens.png" alt="Access Tokens"><br><img src="/images/facebook_chatbot/create_new_page.png" alt="Create New Page"><br><img src="/images/facebook_chatbot/public_figure.png" alt="Public Figure"><br><img src="/images/facebook_chatbot/page_setting.png" alt="Page Setting"><br><img src="/images/facebook_chatbot/skip_photo.png" alt="Skip Photo"><br><img src="/images/facebook_chatbot/page_done.png" alt="Page Done"></p>
 <ol start="5">
 <li>Page 생성이 완료되었다면 다시 Access Tokens 내부 화면으로 돌아와서 하단에 <em>Add or Remove Pages</em>를 눌러줍니다.</li>
 </ol>
-<p><img src="/images/access_tokens_add_page.png" alt="Access Tokens Add Page"><br><img src="/images/what_pages.png" alt="What Pages"><br><img src="/images/allowed_to.png" alt="Allowed to"><br><img src="/images/add_page_done.png" alt="Add Page Done"></p>
+<p><img src="/images/facebook_chatbot/access_tokens_add_page.png" alt="Access Tokens Add Page"><br><img src="/images/facebook_chatbot/what_pages.png" alt="What Pages"><br><img src="/images/facebook_chatbot/allowed_to.png" alt="Allowed to"><br><img src="/images/facebook_chatbot/add_page_done.png" alt="Add Page Done"></p>
 <ol start="6">
 <li>Generate Token을 눌러줍니다.</li>
 </ol>
-<p><img src="/images/add_page_done_generate.png" alt="Add Page Done Generate"></p>
+<p><img src="/images/facebook_chatbot/add_page_done_generate.png" alt="Add Page Done Generate"></p>
 <ol start="7">
 <li><em>I Understand</em>에 체크표시하시고 밑에 생성된 Token을 복사한 뒤 따로 보관해둡니다.(나중에 코드에 들어가게 됩니다.)</li>
 </ol>
-<p><img src="/images/token_generated.png" alt="Token Generated"></p>
+<p><img src="/images/facebook_chatbot/token_generated.png" alt="Token Generated"></p>
 <h3 id="Ngrok으로-테스트해보기"><a href="#Ngrok으로-테스트해보기" class="headerlink" title="Ngrok으로 테스트해보기"></a>Ngrok으로 테스트해보기</h3><p>Ngrok으로 챗봇을 테스트 하기전에 먼저 <em>app.py</em> 파일 내부를 수정해줍니다.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">FB_API_URL = <span class="string">'https://graph.facebook.com/v2.6/me/messages'</span></span><br><span class="line">VERIFY_TOKEN=<span class="string">'my_secret_token'</span></span><br><span class="line">PAGE_ACCESS_TOKEN=<span class="string">'ENNJLCNDJSLKABJVLNEJLKWANJLCNJEL.........'</span></span><br></pre></td></tr></table></figure>
 <p>위의 부분에서 <em>VERIFY_TOKEN</em>은 여러분이 원하는 비밀번호로, <em>PAGE_ACCESS_TOKEN</em> 안에는 아까 발급 받았던 그 token을 ‘’ 사이에 넣어주시면 됩니다.(이 파일을 open된 곳에 upload하지 마세요. 추후에 보안이 필요한 작업입니다.)</p>
 <p>수정을 다 해주셨다면 <a href="https://ngrok.com/" target="_blank" rel="noopener">Ngrok</a>에 들어가셔서 Sign Up을 하신 뒤, ngrok을 다운받습니다. 저같은 경우에는 <em>app.py</em>가 위치하고 있는 폴더에 다운로드하였습니다. </p>
-<p><img src="/images/ngrok.png" alt="ngrok"></p>
+<p><img src="/images/facebook_chatbot/ngrok.png" alt="ngrok"></p>
 <p>ngrok에서 설명하는 것 그대로 진행합니다. </p>
 <p>다운로드 -&gt; 압축해제를 진행한 뒤에 command 창에 3번 그대로 복사붙여넣기를 해주면, 접속을 위한 세팅이 완료되고 4번의 명령어와는 다르게 80대신 5000을 써줍니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ngrok http 5000</span><br></pre></td></tr></table></figure>
 <p>을 실행하게 되면 다음과 같은 화면이 뜨게 됩니다. </p>
-<p><img src="/images/ngrok_5000.png" alt="ngrok_80"></p>
+<p><img src="/images/facebook_chatbot/ngrok_5000.png" alt="ngrok_80"></p>
 <p>그리고 또 다른 터미널 창을 열어주신 뒤, <em>app.py</em> 파일을 실행해줍니다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python app.py</span><br></pre></td></tr></table></figure>
-<p><img src="/images/run_app.png" alt="run_app.py"></p>
+<p><img src="/images/facebook_chatbot/run_app.png" alt="run_app.py"></p>
 <p>이와 같이 ngrok과 app.py 가 모두 준비가 되었다면 다시 브라우저를 통해 <em>access tokens</em> 하단에 있는 <em>webhook</em>에서 <em>Add Callback URL</em>을 클릭합니다. </p>
-<p><img src="/images/add_callback.png" alt="add_callback"><br><img src="/images/set_callback.png" alt="set_callback"><br><img src="/images/webhook.png" alt="webhook"><br><img src="/images/webhook_sub.png" alt="webhook_sub"></p>
+<p><img src="/images/facebook_chatbot/add_callback.png" alt="add_callback"><br><img src="/images/facebook_chatbot/set_callback.png" alt="set_callback"><br><img src="/images/facebook_chatbot/webhook.png" alt="webhook"><br><img src="/images/facebook_chatbot/webhook_sub.png" alt="webhook_sub"></p>
 <p>이제 대략적인 세팅은 끝이 났습니다.</p>
 <p>본인의 page에 hi라고 한번 메세지를 보내봅니다.</p>
-<p><img src="/images/test_hi.png" alt="test_hi"></p>
+<p><img src="/images/facebook_chatbot/test_hi.png" alt="test_hi"></p>
 <p>성공적으로 제가 한 말을 따라합니다. </p>
 <h3 id="Heroku에-배포하기"><a href="#Heroku에-배포하기" class="headerlink" title="Heroku에 배포하기"></a>Heroku에 배포하기</h3><p>Heroku에 배포하기 위해서 설치했던 Heroku CLI를 이용하여 배포해줄 것입니다.</p>
 <p>heroku login을 실행하시고 기다리셨다가 press any key… 가 나오시면 enter 눌러주세요.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">heroku login</span><br><span class="line"></span><br><span class="line">heroku: Press any key to open up the browser to login or q to <span class="built_in">exit</span>:</span><br><span class="line">Opening browser to https://cli-auth.heroku.com/auth/cli/browser/.......................</span><br><span class="line">heroku: Waiting <span class="keyword">for</span> login... ⣷</span><br></pre></td></tr></table></figure>
-<p><img src="/images/heroku_login.png" alt="heroku_login"></p>
+<p><img src="/images/facebook_chatbot/heroku_login.png" alt="heroku_login"></p>
 <p>로그인을 진행해주시면 다음과 같이 커맨드창에 나타납니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Logging <span class="keyword">in</span>... <span class="keyword">done</span></span><br><span class="line">Logged <span class="keyword">in</span> as &lt;your email address&gt;</span><br></pre></td></tr></table></figure>
 <p>로그인이 성공적으로 완료되었다면 다음 명령어를 실행합니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">heroku create</span><br></pre></td></tr></table></figure>
 <p>실행하면, heroku는 자동적으로 웹 서버를 만들기 시작합니다. </p>
-<p><img src="/images/heroku_create.png" alt="heroku_create"></p>
+<p><img src="/images/facebook_chatbot/heroku_create.png" alt="heroku_create"></p>
 <p>이제 생성된 Heroku App에 우리가 만든 소스를 배포시키려고 합니다.</p>
 <p>배포하기 전에 다음과 같은 내용을 가진 <em>requirements.txt</em>을 만들어주고</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Flask==1.0.2</span><br><span class="line">requests==2.21.0</span><br><span class="line">gunicorn==20.0.4</span><br></pre></td></tr></table></figure>
@@ -346,12 +346,12 @@ ga('send', 'pageview');
 <p>위의 과정까지 마치셨다면 다음 명령어들을 차례대로 실행합니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'init'</span></span><br><span class="line">heroku git:remote -a &lt;your_project_name&gt;</span><br><span class="line">git push heroku master</span><br></pre></td></tr></table></figure>
 <p>밑의 사진들은 제가 실행시킨 결과입니다.</p>
-<p><img src="/images/git_process.png" alt="git_process"><br><img src="/images/deploy_process.png" alt="deploy_process"></p>
+<p><img src="/images/facebook_chatbot/git_process.png" alt="git_process"><br><img src="/images/facebook_chatbot/deploy_process.png" alt="deploy_process"></p>
 <p>이와 같이 heroku에 배포를 완료했다면, 실행중인 ngrok을 꺼주시고 브라우저에서 callback을 수정합니다.</p>
-<p><img src="/images/edit_callback.png" alt="edit_callback"><br><img src="/images/edit_callback_heroku.png" alt="edit_callback_heroku"></p>
+<p><img src="/images/facebook_chatbot/edit_callback.png" alt="edit_callback"><br><img src="/images/facebook_chatbot/edit_callback_heroku.png" alt="edit_callback_heroku"></p>
 <p>이 과정을 모두 수행하셨다면 </p>
 <p>마지막으로 page에 테스트 메세지를 보내봅니다.</p>
-<p><img src="/images/final_test.png" alt="final_test"></p>
+<p><img src="/images/facebook_chatbot/final_test.png" alt="final_test"></p>
 <h3 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h3><p>기존 버전이 2017년 버전으로 되어있어서 많은 부분이 다르기 때문에 </p>
 <p>급하게 블로그 내용을 수정하였습니다. </p>
 <p>추가적으로 내용 수정을 들어가겠으며 질문이 있으시면 얼마든지 코멘트 달아주세요.</p>
@@ -374,7 +374,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="cks4xiq13000z0pcj5ci44dy6" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://korchris.github.io/2017/06/29/FB_chatbot/" data-id="clr8w7rx1000o1vi99t1d1a31" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -495,6 +495,25 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2024/01/11/coding_interview_preparing/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/deep_learning.jpg)" alt="코딩 인터뷰 준비" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Coding/">Coding</a></p>
+                            <p class="item-title"><a href="/2024/01/11/coding_interview_preparing/" class="title">코딩 인터뷰 준비</a></p>
+                            <p class="item-date"><time datetime="2024-01-11T05:47:00.000Z" itemprop="datePublished">2024-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2021/08/10/M1_chrome_issue/" class="thumbnail">
     
     
@@ -552,29 +571,10 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/08/23/mnist/" class="thumbnail">
+                            <a href="/2020/03/15/chat_with_chatGPT/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/deep_learning.jpg)" alt="[Pytorch]MNIST DNN부터 CNN까지" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a></p>
-                            <p class="item-title"><a href="/2019/08/23/mnist/" class="title">[Pytorch]MNIST DNN부터 CNN까지</a></p>
-                            <p class="item-date"><time datetime="2019-08-23T14:47:00.000Z" itemprop="datePublished">2019-08-23</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/01/25/Alphastar/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/alphastar.jpg)" alt="알파스타,  실시간 전략 게임 스타크래프트2 정복하기[딥마인드 소식 번역]" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/chatGPT/chatGPT.png)" alt="chatGPT의 놀라운 대화능력에 대한 실험" class="thumbnail-image"></span>
     
 </a>
 
@@ -582,8 +582,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a></p>
-                            <p class="item-title"><a href="/2019/01/25/Alphastar/" class="title">알파스타,  실시간 전략 게임 스타크래프트2 정복하기[딥마인드 소식 번역]</a></p>
-                            <p class="item-date"><time datetime="2019-01-25T10:52:00.000Z" itemprop="datePublished">2019-01-25</time></p>
+                            <p class="item-title"><a href="/2020/03/15/chat_with_chatGPT/" class="title">chatGPT의 놀라운 대화능력에 대한 실험</a></p>
+                            <p class="item-date"><time datetime="2020-03-15T05:22:00.000Z" itemprop="datePublished">2020-03-15</time></p>
                         </div>
                     </li>
                 
@@ -596,7 +596,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chatbot/">Chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/M1/">M1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">3</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chatbot/">Chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coding/">Coding</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/M1/">M1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -605,7 +605,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -614,7 +614,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlphaStar/">AlphaStar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certificate/">Certificate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-issue/">Chrome issue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-line/">Chrome red line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-thumbnail/">Chrome red thumbnail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Mind/">Deep Mind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-learning/">Deep learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/M1/">M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Macbook/">Macbook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-learning/">Machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/">Pytorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reinforcement-learning/">Reinforcement_learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlphaStar/">AlphaStar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certificate/">Certificate</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-issue/">Chrome issue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-line/">Chrome red line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-thumbnail/">Chrome red thumbnail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Mind/">Deep Mind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-learning/">Deep learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/M1/">M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Macbook/">Macbook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-learning/">Machine learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/">Pytorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reinforcement-learning/">Reinforcement_learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -623,7 +623,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/AlphaStar/" style="font-size: 10px;">AlphaStar</a> <a href="/tags/Certificate/" style="font-size: 10px;">Certificate</a> <a href="/tags/Chrome-issue/" style="font-size: 10px;">Chrome issue</a> <a href="/tags/Chrome-red-line/" style="font-size: 10px;">Chrome red line</a> <a href="/tags/Chrome-red-thumbnail/" style="font-size: 10px;">Chrome red thumbnail</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 20px;">Deep Learning</a> <a href="/tags/Deep-Mind/" style="font-size: 10px;">Deep Mind</a> <a href="/tags/Deep-learning/" style="font-size: 10px;">Deep learning</a> <a href="/tags/M1/" style="font-size: 10px;">M1</a> <a href="/tags/ML/" style="font-size: 15px;">ML</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Machine-learning/" style="font-size: 10px;">Machine learning</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/Reinforcement-learning/" style="font-size: 10px;">Reinforcement_learning</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+            <a href="/tags/AlphaStar/" style="font-size: 10px;">AlphaStar</a> <a href="/tags/Certificate/" style="font-size: 15px;">Certificate</a> <a href="/tags/Chrome-issue/" style="font-size: 10px;">Chrome issue</a> <a href="/tags/Chrome-red-line/" style="font-size: 10px;">Chrome red line</a> <a href="/tags/Chrome-red-thumbnail/" style="font-size: 10px;">Chrome red thumbnail</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 20px;">Deep Learning</a> <a href="/tags/Deep-Mind/" style="font-size: 10px;">Deep Mind</a> <a href="/tags/Deep-learning/" style="font-size: 10px;">Deep learning</a> <a href="/tags/Interview/" style="font-size: 10px;">Interview</a> <a href="/tags/M1/" style="font-size: 10px;">M1</a> <a href="/tags/ML/" style="font-size: 15px;">ML</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Machine-learning/" style="font-size: 15px;">Machine learning</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/Reinforcement-learning/" style="font-size: 10px;">Reinforcement_learning</a> <a href="/tags/Tensorflow/" style="font-size: 15px;">Tensorflow</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
         </div>
     </div>
 
@@ -652,7 +652,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2021 KorChris<br>
+            &copy; 2024 KorChris<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
