@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지 | Code Brewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지문제 설명오픈채팅방카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다. 신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다.  채팅">
+<meta name="keywords" content="Programmers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[PCCP 기출문제] 2번 &#x2F; 퍼즐 게임 챌린지">
+<meta property="og:url" content="http://korchris.github.io/2024/12/03/kakao_openchat/index.html">
+<meta property="og:site_name" content="Code Brewer">
+<meta property="og:description" content="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지문제 설명오픈채팅방카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다. 신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다.  채팅">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://korchris.github.io/images/book.jpg">
+<meta property="og:updated_time" content="2024-12-03T14:16:21.139Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[PCCP 기출문제] 2번 &#x2F; 퍼즐 게임 챌린지">
+<meta name="twitter:description" content="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지문제 설명오픈채팅방카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다. 신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다.  채팅">
+<meta name="twitter:image" content="http://korchris.github.io/images/book.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-133241164-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Code Brewer</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/chanung_jeong.png" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/chanung_jeong.png" />
+            <h2 id="name">Chanung Jeong</h2>
+            <h3 id="title">A.I. Scientist in Standigm.</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Seoul, South Korea</span>
+            <a id="follow" target="_blank" href="https://github.com/korchris/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                11
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                22
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/korchris/korchris" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-kakao_openchat" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            [PCCP 기출문제] 2번 / 퍼즐 게임 챌린지
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2024/12/03/kakao_openchat/">
+            <time datetime="2024-12-03T10:43:00.000Z" itemprop="datePublished">2024-12-03</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/Practice/">Practice</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Programmers/">Programmers</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="PCCP-기출문제-2번-퍼즐-게임-챌린지"><a href="#PCCP-기출문제-2번-퍼즐-게임-챌린지" class="headerlink" title="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지"></a>[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지</h1><h3 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h3><p>오픈채팅방<br>카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.</p>
+<p>신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. </p>
+<p>채팅방에 누군가 들어오면 다음 메시지가 출력된다.</p>
+<p>“[닉네임]님이 들어왔습니다.”</p>
+<p>채팅방에서 누군가 나가면 다음 메시지가 출력된다.</p>
+<p>“[닉네임]님이 나갔습니다.”</p>
+<p>채팅방에서 닉네임을 변경하는 방법은 다음과 같이 두 가지이다.</p>
+<p>채팅방을 나간 후, 새로운 닉네임으로 다시 들어간다.</p>
+<p>채팅방에서 닉네임을 변경한다.</p>
+<p>닉네임을 변경할 때는 기존에 채팅방에 출력되어 있던 메시지의 닉네임도 전부 변경된다.</p>
+<p>예를 들어, 채팅방에 “Muzi”와 “Prodo”라는 닉네임을 사용하는 사람이 순서대로 들어오면 채팅방에는 다음과 같이 메시지가 출력된다.</p>
+<p>“Muzi님이 들어왔습니다.”<br>“Prodo님이 들어왔습니다.”</p>
+<p>채팅방에 있던 사람이 나가면 채팅방에는 다음과 같이 메시지가 남는다.</p>
+<p>“Muzi님이 들어왔습니다.”<br>“Prodo님이 들어왔습니다.”<br>“Muzi님이 나갔습니다.”</p>
+<p>Muzi가 나간후 다시 들어올 때, Prodo 라는 닉네임으로 들어올 경우 기존에 채팅방에 남아있던 Muzi도 Prodo로 다음과 같이 변경된다.</p>
+<p>“Prodo님이 들어왔습니다.”<br>“Prodo님이 들어왔습니다.”<br>“Prodo님이 나갔습니다.”<br>“Prodo님이 들어왔습니다.”</p>
+<p>채팅방은 중복 닉네임을 허용하기 때문에, 현재 채팅방에는 Prodo라는 닉네임을 사용하는 사람이 두 명이 있다. 이제, 채팅방에 두 번째로 들어왔던 Prodo가 Ryan으로 닉네임을 변경하면 채팅방 메시지는 다음과 같이 변경된다.</p>
+<p>“Prodo님이 들어왔습니다.”<br>“Ryan님이 들어왔습니다.”<br>“Prodo님이 나갔습니다.”<br>“Prodo님이 들어왔습니다.”</p>
+<p>채팅방에 들어오고 나가거나, 닉네임을 변경한 기록이 담긴 문자열 배열 record가 매개변수로 주어질 때, 모든 기록이 처리된 후, 최종적으로 방을 개설한 사람이 보게 되는 메시지를 문자열 배열 형태로 return 하도록 solution 함수를 완성하라.</p>
+<p>제한사항<br>record는 다음과 같은 문자열이 담긴 배열이며, 길이는 1 이상 100,000 이하이다.</p>
+<p>다음은 record에 담긴 문자열에 대한 설명이다.</p>
+<p>모든 유저는 [유저 아이디]로 구분한다.</p>
+<p>[유저 아이디] 사용자가 [닉네임]으로 채팅방에 입장 - “Enter [유저 아이디] [닉네임]” (ex. “Enter uid1234 Muzi”)</p>
+<p>[유저 아이디] 사용자가 채팅방에서 퇴장 - “Leave [유저 아이디]” (ex. “Leave uid1234”)</p>
+<p>[유저 아이디] 사용자가 닉네임을 [닉네임]으로 변경 - “Change [유저 아이디] [닉네임]” (ex. “Change uid1234 Muzi”)</p>
+<p>첫 단어는 Enter, Leave, Change 중 하나이다.</p>
+<p>각 단어는 공백으로 구분되어 있으며, 알파벳 대문자, 소문자, 숫자로만 이루어져있다.</p>
+<p>유저 아이디와 닉네임은 알파벳 대문자, 소문자를 구별한다.</p>
+<p>유저 아이디와 닉네임의 길이는 1 이상 10 이하이다.</p>
+<p>채팅방에서 나간 유저가 닉네임을 변경하는 등 잘못 된 입력은 주어지지 않는다.</p>
+<p>입출력 예<br>|record|result|<br>|——|——|<br>|[“Enter uid1234 Muzi”, “Enter uid4567 Prodo”,”Leave uid1234”,”Enter uid1234 Prodo”,”Change uid4567 Ryan”]|[“Prodo님이 들어왔습니다.”, “Ryan님이 들어왔습니다.”, “Prodo님이 나갔습니다.”, “Prodo님이 들어왔습니다.”]|</p>
+<p>입출력 예 설명</p>
+<p>입출력 예 #1<br>문제의 설명과 같다.</p>
+<h2 id="풀이과정-1"><a href="#풀이과정-1" class="headerlink" title="풀이과정 1"></a>풀이과정 1</h2><p>사실 문제를 처음 봤을 때에는 constructor를 사용해서 계속해서 업데이트를 해주면 좋겠다고 생각을 했다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># User constructor 생성</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, status, uid, nick)</span>:</span></span><br><span class="line">        self.status = status</span><br><span class="line">        self.uid = uid</span><br><span class="line">        self.nick = nick</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setStatus</span><span class="params">(self, new_status)</span>:</span></span><br><span class="line">        self.status = new_status</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setNick</span><span class="params">(self, new_nick)</span>:</span></span><br><span class="line">        self.nick = new_nick</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(record)</span>:</span></span><br><span class="line">    users = []</span><br><span class="line">    number = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> record:</span><br><span class="line">        <span class="comment"># message의 시작 단어에 따라 다르게 알고리즘을 짜줌.</span></span><br><span class="line">        <span class="keyword">if</span> m.startswith(<span class="string">"Enter"</span>):</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            <span class="keyword">if</span> users:</span><br><span class="line">                t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user.uid == u]</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> t:</span><br><span class="line">                    c = User(s, u, n)</span><br><span class="line">                    users.append(c)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    t[<span class="number">0</span>].setStatus(<span class="string">"Enter"</span>)</span><br><span class="line">                    t[<span class="number">0</span>].setNick(n)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                c = User(s, u, n)</span><br><span class="line">                users.append(c)</span><br><span class="line">        <span class="keyword">elif</span> m.startswith(<span class="string">"Leave"</span>):</span><br><span class="line">            s, u = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user.uid ==u]</span><br><span class="line">            <span class="keyword">if</span> t:</span><br><span class="line">                t[<span class="number">0</span>].setStatus(<span class="string">"Leave"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user.uid == u]</span><br><span class="line">            <span class="keyword">if</span> t:</span><br><span class="line">                t[<span class="number">0</span>].setNick(n)</span><br><span class="line">    <span class="comment"># 모든 메세지를 통해 유저들을 최신화 시킨 뒤에 output answer생성</span></span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> record:</span><br><span class="line">        <span class="keyword">if</span> m.startswith(<span class="string">"Enter"</span>):</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user.uid == u]</span><br><span class="line">            nn = t[<span class="number">0</span>].nick</span><br><span class="line">            output = <span class="string">"&#123;&#125;님이 들어왔습니다."</span>.format(nn)</span><br><span class="line">            answer.append(output)</span><br><span class="line">        <span class="keyword">elif</span> m.startswith(<span class="string">"Leave"</span>):</span><br><span class="line">            s, u = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user.uid == u]</span><br><span class="line">            nn = t[<span class="number">0</span>].nick</span><br><span class="line">            output = <span class="string">"&#123;&#125;님이 나갔습니다."</span>.format(nn)</span><br><span class="line">            answer.append(output)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
+<p>이면.. 풀릴 줄 알았는데 25번 문제부터 timeout이 걸리면서 멘붕..</p>
+<p>어떻게 해야 풀릴 수 있을까 생각하다가 dictionary를 사용하기로 마음을 먹었다.</p>
+<p>더 가볍게 풀릴 수 있을 것 같았다.</p>
+<h2 id="풀이과정-2"><a href="#풀이과정-2" class="headerlink" title="풀이과정 2"></a>풀이과정 2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(record)</span>:</span></span><br><span class="line">    users = []</span><br><span class="line">    number = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> record:</span><br><span class="line">        <span class="keyword">if</span> m.startswith(<span class="string">"Enter"</span>):</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            <span class="keyword">if</span> users:</span><br><span class="line">                t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user[<span class="string">'uid'</span>] == u]</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> t:</span><br><span class="line">                    c = &#123;<span class="string">'status'</span>:s, <span class="string">'uid'</span>:u, <span class="string">'nick'</span>:n&#125;</span><br><span class="line">                    users.append(c)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    t[<span class="number">0</span>][<span class="string">'status'</span>] = s</span><br><span class="line">                    t[<span class="number">0</span>][<span class="string">'nick'</span>] = n</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                c = &#123;<span class="string">'status'</span>:s, <span class="string">'uid'</span>:u, <span class="string">'nick'</span>:n&#125;</span><br><span class="line">                users.append(c)</span><br><span class="line">        <span class="keyword">elif</span> m.startswith(<span class="string">"Leave"</span>):</span><br><span class="line">            s, u = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user[<span class="string">'uid'</span>] == u]</span><br><span class="line">            <span class="keyword">if</span> t:</span><br><span class="line">                t[<span class="number">0</span>][<span class="string">'status'</span>] = <span class="string">"Leave"</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user[<span class="string">'uid'</span>] == u]</span><br><span class="line">            <span class="keyword">if</span> t:</span><br><span class="line">                t[<span class="number">0</span>][<span class="string">'nick'</span>] = n</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> record:</span><br><span class="line">        <span class="keyword">if</span> m.startswith(<span class="string">"Enter"</span>):</span><br><span class="line">            s, u, n = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user[<span class="string">'uid'</span>] == u]</span><br><span class="line">            nn = t[<span class="number">0</span>][<span class="string">'nick'</span>]</span><br><span class="line">            output = <span class="string">"&#123;&#125;님이 들어왔습니다."</span>.format(nn)</span><br><span class="line">            answer.append(output)</span><br><span class="line">        <span class="keyword">elif</span> m.startswith(<span class="string">"Leave"</span>):</span><br><span class="line">            s, u = m.split()</span><br><span class="line">            t = [user <span class="keyword">for</span> user <span class="keyword">in</span> users <span class="keyword">if</span> user[<span class="string">'uid'</span>] == u]</span><br><span class="line">            nn = t[<span class="number">0</span>][<span class="string">'nick'</span>]</span><br><span class="line">            output = <span class="string">"&#123;&#125;님이 나갔습니다."</span>.format(nn)</span><br><span class="line">            answer.append(output)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
+<p>그런데… 이것도 안 풀린다!! 도대체 25번 문제에 얼마나 많은 레코드들이 들어있는 것인지?</p>
+<p>어떻게 해야 더 빨리 할 수 있지??</p>
+<h2 id="풀이과정-3"><a href="#풀이과정-3" class="headerlink" title="풀이과정 3"></a>풀이과정 3</h2><p>그래서 결국 참고하게 된 다른 분의 코드를 약간 수정한 버전..</p>
+<p>결국 ‘마지막’에 어떻게 nick이 남는지가 중요했고<br>그냥 하나의 dictionary에다가 dict[uid] = nickname로 형태를 정하고<br>Enter와 Change일 때마다 계속해서 덮어씌우면 되는 것이었다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(record)</span>:</span></span><br><span class="line">    dic = &#123;&#125;</span><br><span class="line">    answer = []</span><br><span class="line">    record = [i.split(<span class="string">' '</span>) <span class="keyword">for</span> i <span class="keyword">in</span> record]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> record:</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">0</span>] == <span class="string">"Change"</span> <span class="keyword">and</span> i[<span class="number">1</span>] <span class="keyword">in</span> dic:</span><br><span class="line">            dic[i[<span class="number">1</span>]] = i[<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">elif</span> i[<span class="number">0</span>] == <span class="string">"Enter"</span>:</span><br><span class="line">            dic[i[<span class="number">1</span>]] = i[<span class="number">2</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> record:</span><br><span class="line">        <span class="keyword">if</span> j[<span class="number">0</span>] == <span class="string">"Enter"</span>:</span><br><span class="line">            answer.append(<span class="string">"&#123;&#125;님이 들어왔습니다."</span>.format(dic[j[<span class="number">1</span>]]))</span><br><span class="line">        <span class="keyword">elif</span> j[<span class="number">0</span>] == <span class="string">"Leave"</span>:</span><br><span class="line">            answer.append(<span class="string">"&#123;&#125;님이 나갔습니다."</span>.format(dic[j[<span class="number">1</span>]]))</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
+<p>재밌어보여서 시작했지만 코테에서 시간초과 걸려본건 처음이라 당황</p>
+<p>코테 때 파이썬 쓸 때에는 dictionary를 잘 사용해봐야겠다.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://korchris.github.io/2024/12/03/kakao_openchat/" data-id="cm48jofcg0011hli9xnfuxdi1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://korchris.github.io/2024/12/03/kakao_openchat/#comments" class="article-comment-link"><span class="fb-comments-count" data-href="http://korchris.github.io/2024/12/03/kakao_openchat/">0</span>&nbsp;Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2024/12/03/PCCP2_puzzle_game_challenge/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    [PCCP 기출문제] 2번 / 퍼즐 게임 챌린지
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2024/12/03/PCCP1_video/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">[PCCP 기출문제] 1번 / 동영상 재생기</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div class="fb-comments" data-width="100%" data-href="http://korchris.github.io/2024/12/03/kakao_openchat/" data-num-posts="5"></div>
+
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2024/12/03/PCCP2_puzzle_game_challenge/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/book.jpg)" alt="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Practice/">Practice</a></p>
+                            <p class="item-title"><a href="/2024/12/03/PCCP2_puzzle_game_challenge/" class="title">[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지</a></p>
+                            <p class="item-date"><time datetime="2024-12-03T10:43:00.000Z" itemprop="datePublished">2024-12-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2024/12/03/kakao_openchat/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/book.jpg)" alt="[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Practice/">Practice</a></p>
+                            <p class="item-title"><a href="/2024/12/03/kakao_openchat/" class="title">[PCCP 기출문제] 2번 / 퍼즐 게임 챌린지</a></p>
+                            <p class="item-date"><time datetime="2024-12-03T10:43:00.000Z" itemprop="datePublished">2024-12-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2024/12/03/PCCP1_video/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/book.jpg)" alt="[PCCP 기출문제] 1번 / 동영상 재생기" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Practice/">Practice</a></p>
+                            <p class="item-title"><a href="/2024/12/03/PCCP1_video/" class="title">[PCCP 기출문제] 1번 / 동영상 재생기</a></p>
+                            <p class="item-date"><time datetime="2024-12-03T05:43:00.000Z" itemprop="datePublished">2024-12-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/08/10/M1_chrome_issue/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/M1/">M1</a></p>
+                            <p class="item-title"><a href="/2021/08/10/M1_chrome_issue/" class="title">M1 맥북 오류 / 크롬 오류 / 빨간 줄 / 빨간 썸네일 해결 방법</a></p>
+                            <p class="item-date"><time datetime="2021-08-09T17:41:00.000Z" itemprop="datePublished">2021-08-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/04/07/[DL-scratch] 0 - basic python/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/DL_scratch/DL_scratch_0_000.jpg)" alt="[DL:scratch] 0 - basic python" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></p>
+                            <p class="item-title"><a href="/2021/04/07/[DL-scratch] 0 - basic python/" class="title">[DL:scratch] 0 - basic python</a></p>
+                            <p class="item-date"><time datetime="2021-04-07T14:00:00.000Z" itemprop="datePublished">2021-04-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chatbot/">Chatbot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/M1/">M1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Practice/">Practice</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlphaStar/">AlphaStar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Certificate/">Certificate</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-issue/">Chrome issue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-line/">Chrome red line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-red-thumbnail/">Chrome red thumbnail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/">DL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Mind/">Deep Mind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-learning/">Deep learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/M1/">M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Macbook/">Macbook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-learning/">Machine learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programmers/">Programmers</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/">Pytorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reinforcement-learning/">Reinforcement_learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatbot/">chatbot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AlphaStar/" style="font-size: 10px;">AlphaStar</a> <a href="/tags/Certificate/" style="font-size: 13.33px;">Certificate</a> <a href="/tags/Chrome-issue/" style="font-size: 10px;">Chrome issue</a> <a href="/tags/Chrome-red-line/" style="font-size: 10px;">Chrome red line</a> <a href="/tags/Chrome-red-thumbnail/" style="font-size: 10px;">Chrome red thumbnail</a> <a href="/tags/DL/" style="font-size: 13.33px;">DL</a> <a href="/tags/Deep-Learning/" style="font-size: 20px;">Deep Learning</a> <a href="/tags/Deep-Mind/" style="font-size: 10px;">Deep Mind</a> <a href="/tags/Deep-learning/" style="font-size: 10px;">Deep learning</a> <a href="/tags/M1/" style="font-size: 10px;">M1</a> <a href="/tags/ML/" style="font-size: 13.33px;">ML</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Machine-Learning/" style="font-size: 13.33px;">Machine Learning</a> <a href="/tags/Machine-learning/" style="font-size: 13.33px;">Machine learning</a> <a href="/tags/Programmers/" style="font-size: 16.67px;">Programmers</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/Reinforcement-learning/" style="font-size: 10px;">Reinforcement_learning</a> <a href="/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/tags/chatbot/" style="font-size: 10px;">chatbot</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2024 KorChris<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
